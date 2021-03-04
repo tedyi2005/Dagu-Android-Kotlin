@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/checkout_fragment"
+    android:id="@+id/checkout_nav_graph">
+
+    <fragment
+        android:id="@+id/checkout_fragment"
+        android:name="com.dagu.android.presentation.checkout.CheckoutFragment"
+        android:label="CheckoutFragment"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_checkout_fragment_to_contactInfoFragment"
+            app:destination="@id/contact_info_fragment" />
+
+        <action
+            android:id="@+id/action_checkout_fragment_to_edit_pickup_time_fragment"
+            app:destination="@id/edit_pickup_time_fragment" />
+        <action
+            android:id="@+id/action_checkout_fragment_to_edit_pickup_location_selection"
+            app:destination="@id/locations_fragment" />
+
+        <action
+            android:id="@+id/edit_pickup_type_action"
+            app:destination="@id/pickup_type_fragment" />
+
+        <action
+            android:id="@+id/order_tracking_action"
+            app:destination="@id/order_tracking_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/order_tracking_fragment"
+        android:name="com.dagu.android.presentation.checkout.OrderTrackingFragment"
+        android:label="OrderTrackingFragment"
+        tools:layout="@layout/fragment_order_tracking" />
+    <fragment
+        android:id="@+id/edit_pickup_location_search_location"
+        android:name="com.dagu.android.presentation.checkout.editpickuplocation.EditPickupSearchLocationFragment"
+        android:label="EditPickupSearchLocationFragment"
+        tools:layout="@layout/fragment_edit_pick_search_location">
+
+        <action
+            android:id="@+id/pickup_type_action"
+            app:destination="@id/pickup_type_fragment" />
+
+        <action
+            android:id="@+id/no_near_location_action"
+            app:destination="@id/no_near_location_fragment" />
+
+        <action
+            android:id="@+id/nearby_locations_fragment_action"
+            app:destination="@id/locations_fragment" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/edit_pickup_time_fragment"
+        android:name="com.dagu.android.presentation.checkout.editpickuptime.EditPickupTimeFragment"
+        android:label="EditPickupTimeFragment"
+        tools:layout="@layout/fragment_edit_pickup_time" />
+    <dialog
+        android:id="@+id/contact_info_fragment"
+        android:name="com.dagu.android.presentation.checkout.ContactInfoFragment"
+        android:label="ContactInfoFragment"
+        tools:layout="@layout/fragment_contact_info" />
+
+    <dialog
+        android:id="@+id/no_near_location_fragment"
+        android:name="com.dagu.android.presentation.location.NoNearLocationFragment"
+        android:label="NoNearLocationFragment"
+        tools:layout="@layout/fragment_no_near_locations" />
+
+    <fragment
+        android:id="@+id/pickup_type_fragment"
+        android:name="com.dagu.android.presentation.location.pickuptype.PickupTypeFragment"
+        android:label="PickupTypeFragment"
+        tools:layout="@layout/fragment_pickup_type">
+
+        <action
+            android:id="@+id/pickup_car_action"
+            app:destination="@id/pickup_car_info" />
+
+        <argument
+            android:name="location"
+            app:argType="com.dagu.android.data.location.Location"
+            app:nullable="true" />
+
+        <argument
+            android:name="locationId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+        <argument
+            android:name="pickup_type"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/pickup_car_info"
+        android:name="com.dagu.android.presentation.location.pickuptype.PickupCarInfoFragment"
+        android:label="PickupCarInfoFragment"
+        tools:layout="@layout/fragment_car_pickup_detail">
+
+        <action
+            android:id="@+id/car_info_dialog_action"
+            app:destination="@id/car_info_dialog_fragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/car_info_dialog_fragment"
+        android:name="com.dagu.android.presentation.location.pickuptype.CarInfoDialogFragment"
+        android:label="CarInfoDialogFragment"
+        tools:layout="@layout/fragment_car_info_dialog">
+
+        <argument
+            android:name="isForCarColor"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/locations_fragment"
+        android:name="com.dagu.android.presentation.location.LocationsFragment"
+        android:label="LocationsFragment">
+        <action
+            android:id="@+id/no_near_location_action"
+            app:destination="@id/no_near_location_fragment" />
+
+        <action
+            android:id="@+id/nearby_locations_fragment_action"
+            app:destination="@id/locations_fragment" />
+
+        <action
+            android:id="@+id/pickup_type_action"
+            app:destination="@id/pickup_type_fragment" />
+
+    </fragment>
+</navigation>

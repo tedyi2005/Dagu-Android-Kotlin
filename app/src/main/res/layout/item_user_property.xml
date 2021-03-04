@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/top_separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginBottom="@dimen/size_30dp"
+        android:background="@color/grey_200"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/property_title"
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_28dp"
+        android:layout_marginTop="@dimen/size_30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_separator"
+        tools:text="2 addresses" />
+
+    <TextView
+        android:id="@+id/property_description"
+        style="@style/ShakeShackTextView.BodyNormal.Grey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_28dp"
+        android:drawablePadding="@dimen/size_10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/property_chevron_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/property_title"
+        tools:text="Here and there, there, there, there, there, there, there, there, there, there, there, " />
+
+    <ImageView
+        android:id="@+id/property_chevron_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_37dp"
+        android:src="@drawable/ic_chevron_right_black"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_separator" />
+
+    <View
+        android:id="@+id/bottom_separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginVertical="@dimen/size_30dp"
+        android:background="@color/grey_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/property_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

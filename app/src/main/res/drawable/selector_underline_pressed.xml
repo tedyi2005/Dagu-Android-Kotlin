@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:gravity="bottom" android:state_pressed="true">
+                <shape>
+                    <size android:height="3dp" />
+                    <solid android:color="@color/primary_green" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

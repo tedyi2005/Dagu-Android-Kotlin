@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.dagu.android.presentation.authentication.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_fragment_to_create_account_fragment"
+            app:destination="@id/create_account_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_forgot_password_fragment"
+            app:destination="@id/forgot_password_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_account_fragment"
+        android:name="com.dagu.android.presentation.authentication.CreateAccountFragment"
+        android:label="CreateAccountFragment"
+        tools:layout="@layout/fragment_create_account">
+        <action
+            android:id="@+id/action_create_account_fragment_to_forgot_password_fragment"
+            app:destination="@id/forgot_password_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgot_password_fragment"
+        android:name="com.dagu.android.presentation.authentication.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password" />
+
+</navigation>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "feature": "Non-GMO potato bun",
+    "curiosity": "Always keeping the taste golden 'cuz it is buttery and toasted on griddle",
+    "category": "Burgers",
+    "image": "ic_burgers"
+  },
+  {
+    "id": 2,
+    "feature": "Crinkle-Cut real Fries",
+    "curiosity": "Yukon potatos, oil, and salt. No artificial ingredients",
+    "category": "Crinkle Cut Fries",
+    "image": "ic_fries"
+  },
+  {
+    "id": 3,
+    "feature": "Hot Chick'n",
+    "curiosity": "Crispy chicken breast dusted with a guajillo and cayenne pepper blend and topped with slaw and pickles",
+    "category": "Chick'n Bites",
+    "image": "ic_chickens"
+  }
+]

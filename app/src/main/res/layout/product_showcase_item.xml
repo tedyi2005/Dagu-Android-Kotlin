@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/size_70dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="@dimen/size_100dp"
+        android:layout_height="@dimen/size_100dp"
+        android:layout_marginBottom="@dimen/size_70dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_burgers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feature"
+        style="@style/ShakeShackTextView.HeadingH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/size_20dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_image" />
+
+    <TextView
+        android:id="@+id/curiosity"
+        style="@style/ShakeShackTextView.BodyNormal.Grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_20dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feature" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

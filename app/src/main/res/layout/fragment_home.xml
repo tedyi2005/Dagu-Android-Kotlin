@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/test_feature_bg_color"
+    tools:context=".presentation.home.HomeFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/home_view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/view_pager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_2dp"
+        android:layout_marginStart="@dimen/size_62dp"
+        android:layout_marginBottom="@dimen/size_67dp"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/home_view_pager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@drawable/item_feature_indicator_selector"
+        app:tabIndicatorHeight="0dp"
+        app:tabMaxWidth="@dimen/size_16dp" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/carousel_button"
+        android:layout_width="@dimen/size_25dp"
+        android:layout_height="@dimen/size_25dp"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginBottom="@dimen/size_57dp"
+        android:background="@drawable/btn_play_pause_carousel"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/home_view_pager"
+        app:layout_constraintEnd_toStartOf="@+id/view_pager_indicator"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.ShakeShack.Main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ss_custom_action_bar_size"
+            android:minHeight="@dimen/ss_custom_action_bar_size">
+
+            <ImageView
+                android:id="@+id/shake_shack_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/shake_shack_logo_description"
+                android:src="?attr/shakeShackLogo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

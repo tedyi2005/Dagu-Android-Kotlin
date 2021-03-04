@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_location_title"
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:layout_marginTop="@dimen/size_30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ShakeShackTextView.BodyNormal"
+        android:textColor="@color/grey_500"
+        android:id="@+id/search_location_sub_title"
+        android:layout_marginBottom="@dimen/size_10dp"/>
+
+</LinearLayout>

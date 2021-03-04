@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489104044404",
+    "project_id": "dagu-android",
+    "storage_bucket": "dagu-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489104044404:android:a4a67cb1015a725366fc21",
+        "android_client_info": {
+          "package_name": "com.dagu.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489104044404-ilir6aojgoid4q9fduovnispu9lsg4lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGab8E5D9BH35t8GJgmIt1PZ11rPcFdGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489104044404-ilir6aojgoid4q9fduovnispu9lsg4lu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

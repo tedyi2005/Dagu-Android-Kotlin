@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "itemName": "Soy",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 2,
+    "itemName": "Dairy",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 3,
+    "itemName": "Egg",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 4,
+    "itemName": "Wheat",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 5,
+    "itemName": "Gluten",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 6,
+    "itemName": "Tree Nut",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 7,
+    "itemName": "Peanut",
+    "itemValue": null,
+    "isValueVisible": false
+  }
+]

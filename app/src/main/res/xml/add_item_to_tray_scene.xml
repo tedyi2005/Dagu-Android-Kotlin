@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/tray_items_group">
+        <Constraint android:id="@+id/item_number_one_image_view">
+            <PropertySet
+                android:visibility="gone"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@+id/two_item_layout">
+            <PropertySet
+                android:visibility="gone"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/adding_food_start"
+        app:deriveConstraintsFrom="@id/tray_items_group">
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_280dp"
+            android:layout_marginHorizontal="@dimen/size_6dp"
+            android:layout_marginStart="@dimen/size_25dp"
+            android:layout_marginTop="@dimen/size_100dp"
+            android:layout_marginEnd="@dimen/size_25dp"
+            app:visibilityMode="ignore"
+            app:layout_constraintTop_toBottomOf="@id/item_selected_guideline" />
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/adding_drink_start"
+        app:deriveConstraintsFrom="@id/tray_items_group">
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            app:visibilityMode="ignore"
+            android:layout_width="@dimen/size_73dp"
+            android:layout_height="@dimen/size_73dp"
+            android:layout_marginStart="@dimen/size_30dp"
+            android:layout_marginTop="@dimen/size_30dp"
+            android:layout_marginBottom="@dimen/size_100dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_selected_guideline" />
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/item_lands_in_tray"
+        app:deriveConstraintsFrom="@id/tray_items_group">
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            app:visibilityMode="ignore"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_marginEnd="@dimen/size_5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray"
+            app:visibilityMode="ignore" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/tray_option_start"
+        app:deriveConstraintsFrom="@id/item_lands_in_tray">
+        <Constraint
+            android:id="@+id/tray_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:alpha="0"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tray" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/tray_option_end"
+        app:deriveConstraintsFrom="@id/item_lands_in_tray">
+        <Constraint
+            android:id="@+id/tray_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/tray_amount_guideline"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/second_item_added_start"
+        app:deriveConstraintsFrom="@id/tray_option_end">
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            app:visibilityMode="ignore"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/second_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+
+    <ConstraintSet
+        android:id="@+id/second_item_added_end"
+        app:deriveConstraintsFrom="@id/second_item_added_start">
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginStart="@dimen/size_15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/second_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginEnd="@dimen/size_15dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/second_item_removed"
+        app:deriveConstraintsFrom="@id/second_item_added_end">
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/second_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginEnd="@dimen/size_10dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/third_item_added_start"
+        app:deriveConstraintsFrom="@id/second_item_added_end">
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/second_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginEnd="@dimen/size_10dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/third_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginEnd="@dimen/size_10dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+
+    </ConstraintSet>
+
+
+    <ConstraintSet
+        android:id="@+id/third_item_added_end"
+        app:deriveConstraintsFrom="@id/third_item_added_start">
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:layout_marginEnd="@dimen/size_15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/second_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_25dp"
+            android:layout_marginEnd="@dimen/size_25dp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+        <!--When I set alpha to 1 view does not appear for some reason-->
+        <Constraint
+            android:id="@+id/third_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_25dp"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:alpha="0.99"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/third_item_removed"
+        app:deriveConstraintsFrom="@id/third_item_added_end">
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginStart="@dimen/size_15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/second_item_image_view"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginEnd="@dimen/size_15dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/third_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_25dp"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/fourth_item_added_start"
+        app:deriveConstraintsFrom="@id/third_item_added_end">
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_marginEnd="@dimen/size_15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+
+        <Constraint
+            android:id="@+id/fourth_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/fourth_item_added_end"
+        app:deriveConstraintsFrom="@id/fourth_item_added_start">
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_28dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/fourth_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginEnd="@dimen/size_25dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/third_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_28dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:alpha="0.99"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    </ConstraintSet>
+
+
+    <ConstraintSet
+        android:id="@+id/fourth_item_removed"
+        app:deriveConstraintsFrom="@id/fourth_item_added_end">
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:layout_marginEnd="@dimen/size_15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/fourth_item_image_view"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_marginEnd="@dimen/size_25dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/all_food_items_removed"
+        app:deriveConstraintsFrom="@id/tray_option_end">
+
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            android:layout_height="@dimen/size_280dp"
+            android:layout_marginStart="@dimen/size_25dp"
+            android:layout_marginTop="@dimen/size_100dp"
+            android:layout_marginEnd="@dimen/size_25dp"
+            android:alpha="1"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent " />
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/tray_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/tray_amount_guideline"
+            app:layout_constraintStart_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/all_drink_items_removed"
+        app:deriveConstraintsFrom="@id/tray_option_end">
+
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            android:layout_width="@dimen/size_73dp"
+            android:layout_height="@dimen/size_73dp"
+            android:layout_marginStart="@dimen/size_30dp"
+            android:layout_marginTop="@dimen/size_30dp"
+            android:layout_marginBottom="@dimen/size_100dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_selected_guideline" />
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/tray_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/tray_amount_guideline"
+            app:layout_constraintStart_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/remove_tray_on_scroll"
+        app:deriveConstraintsFrom="@id/tray_option_end">
+
+        <Constraint
+            android:id="@+id/first_item_image_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/tray"
+            app:layout_constraintEnd_toEndOf="@+id/tray"
+            app:layout_constraintStart_toStartOf="@+id/tray"
+            app:layout_constraintTop_toTopOf="@+id/tray" />
+
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            android:layout_height="@dimen/size_280dp"
+            android:layout_marginStart="@dimen/size_25dp"
+            android:layout_marginTop="@dimen/size_100dp"
+            android:layout_marginEnd="@dimen/size_25dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent " />
+
+        <Constraint
+            android:id="@+id/tray_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/tray_amount_guideline"
+            app:layout_constraintStart_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/tray_on_scroll__end"
+        app:deriveConstraintsFrom="@id/item_lands_in_tray">
+
+        <Constraint
+            android:id="@+id/product_selected_image_view"
+            android:layout_width="@dimen/size_73dp"
+            android:layout_height="@dimen/size_73dp"
+            android:layout_marginStart="@dimen/size_30dp"
+            android:layout_marginTop="@dimen/size_30dp"
+            android:layout_marginBottom="@dimen/size_100dp"
+            android:background="@color/black"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_selected_guideline" />
+        <Constraint
+            android:id="@+id/tray_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/tray_amount_guideline"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/food_to_tray_transition"
+        app:constraintSetEnd="@id/item_lands_in_tray"
+        app:constraintSetStart="@+id/adding_food_start"
+        app:duration="600">
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="15"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@+id/product_selected_image_view"
+                app:percentY="-0.25" />
+        </KeyFrameSet>
+
+    </Transition>
+
+    <Transition
+        android:id="@+id/drink_to_tray_transition"
+        app:constraintSetEnd="@id/item_lands_in_tray"
+        app:constraintSetStart="@+id/adding_drink_start"
+        app:duration="500"
+        app:layoutDuringTransition="honorRequest">
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="15"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@+id/product_selected_image_view"
+                app:percentY="-0.25" />
+        </KeyFrameSet>
+
+    </Transition>
+
+    <Transition
+        android:id="@+id/display_expanded_tray_transition"
+        app:constraintSetEnd="@id/tray_option_end"
+        app:constraintSetStart="@+id/tray_option_start"
+        app:duration="500" />
+
+    <Transition
+        android:id="@+id/removed_food_tray_transition"
+        app:constraintSetEnd="@id/all_food_items_removed"
+        app:constraintSetStart="@id/tray_option_end"
+        app:duration="400">
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="85"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@+id/product_selected_image_view"
+                app:percentY="1.00" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/remove_tray"
+        app:constraintSetEnd="@id/remove_tray_on_scroll"
+        app:constraintSetStart="@id/tray_on_scroll__end"
+        app:duration="400">
+
+    </Transition>
+
+    <Transition
+        android:id="@+id/removed_drink_tray_transition"
+        app:constraintSetEnd="@id/all_drink_items_removed"
+        app:constraintSetStart="@id/tray_option_end"
+        app:duration="400"
+        app:layoutDuringTransition="honorRequest">
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="85"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@+id/product_selected_image_view"
+                app:percentY="1.00" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        android:id="@+id/remove_second_item_transition"
+        app:constraintSetEnd="@id/second_item_removed"
+        app:constraintSetStart="@+id/second_item_added_end"
+        app:duration="400" />
+
+    <Transition
+        android:id="@+id/remove_third_item_transition"
+        app:constraintSetEnd="@id/third_item_removed"
+        app:constraintSetStart="@+id/third_item_added_end"
+        app:duration="400" />
+
+    <Transition
+        android:id="@+id/remove_fourth_item_transition"
+        app:constraintSetEnd="@id/fourth_item_removed"
+        app:constraintSetStart="@+id/fourth_item_added_end"
+        app:duration="400" />
+
+    <Transition
+        android:id="@+id/add_second_item_transition"
+        app:constraintSetEnd="@id/second_item_added_end"
+        app:constraintSetStart="@+id/second_item_added_start"
+        app:duration="400" />
+
+    <Transition
+        android:id="@+id/add_third_item_transition"
+        app:constraintSetEnd="@id/third_item_added_end"
+        app:constraintSetStart="@+id/third_item_added_start"
+        app:duration="400" />
+
+    <Transition
+        android:id="@+id/add_fourth_item_transition"
+        app:constraintSetEnd="@id/fourth_item_added_end"
+        app:constraintSetStart="@+id/fourth_item_added_start"
+        app:duration="400" />
+
+
+</MotionScene>

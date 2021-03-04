@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/size_28dp"
+    android:paddingVertical="@dimen/size_28dp">
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/size_32dp"
+        android:layout_height="@dimen/size_32dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="@dimen/size_28dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/create_account_title"
+        style="@style/ShakeShackTextView.HeadingH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lets_create_your_account" />
+
+    <TextView
+        android:id="@+id/contact_info_title"
+        style="@style/ShakeShackTextView.HeadingH3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_36dp"
+        android:text="@string/contact_information" />
+
+    <TextView
+        android:id="@+id/contact_info_description"
+        style="@style/ShakeShackTextView.BodyNormal.Grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_14dp"
+        android:text="@string/contact_information_description"
+        android:textColorLink="@color/grey_500" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_text_input_layout"
+        style="@style/ShakeShackTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_32dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/first_name_text_input_layout"
+            style="@style/ShakeShackTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_marginEnd="@dimen/size_4dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/first_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="personGivenName"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/last_name_text_input_layout"
+            style="@style/ShakeShackTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_4dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/last_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="personFamilyName"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_number_text_input_layout"
+        style="@style/ShakeShackTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_name_text_input_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_number_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="phoneNumber"
+            android:hint="@string/phone_number"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/password_section_title"
+        style="@style/ShakeShackTextView.HeadingH3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_50dp"
+        android:text="@string/password_title" />
+
+    <include
+        android:id="@+id/password_view"
+        layout="@layout/change_password_view" />
+
+    <RadioGroup
+        android:id="@+id/marketing_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_30dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/marketing_emails_radio_button"
+            style="@style/ShakeShackTextView.BodyNormal.Grey"
+            android:text="@string/receive_marketing_emails"
+            android:textColor="@color/grey_500" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_40dp"
+        android:layout_marginBottom="@dimen/size_40dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter_email_next_button"
+            style="@style/ShakeShackButton.Text.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_60dp"
+            android:text="@string/create_account"
+            android:textAllCaps="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/loading_fab_button"
+            style="@style/ShakeShackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:visibility="gone" />
+
+        <com.dagu.android.util.ui.DynamicSineWaveView
+            android:id="@+id/sine_view"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_centerInParent="true"
+            android:elevation="@dimen/size_10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+

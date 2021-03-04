@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_order_details_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_25dp"
+        android:layout_marginVertical="@dimen/size_15dp"
+        android:contentDescription="@string/image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_green_left"
+        android:visibility="gone"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="@dimen/size_48dp"
+        app:layout_anchorGravity="top|start"
+        app:maxImageSize="@dimen/size_15dp"
+        app:tint="@color/black" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/size_16dp"
+            android:paddingBottom="@dimen/size_80dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ss_custom_action_bar_size"
+                android:minHeight="@dimen/ss_custom_action_bar_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <TextView
+                    android:id="@+id/order_details_title"
+                    style="@style/ShakeShackTextView.HeadingH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/order_details_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/order_placed_title"
+                    style="@style/ShakeShackTextView.BodyNormal.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_40dp"
+                    android:text="@string/order_placed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/order_details_title" />
+
+                <TextView
+                    android:id="@+id/order_placed_date"
+                    style="@style/ShakeShackTextView.BodyNormal.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/order_placed_title"
+                    tools:text="Thursday, Dec 11th at 8:18 PM" />
+
+                <TextView
+                    android:id="@+id/order_canceled_instruction"
+                    style="@style/ShakeShackTextView.BodyNormal.Grey.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/size_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/order_was_canceled"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_info"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/order_placed_date" />
+
+                <TextView
+                    android:id="@+id/delivery_or_pickup_type_title"
+                    style="@style/ShakeShackTextView.BodyNormal.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:text="@string/delivery_or_pickup_type_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/order_canceled_instruction" />
+
+                <TextView
+                    android:id="@+id/delivery_or_pickup_description"
+                    style="@style/ShakeShackTextView.BodyNormal.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/size_10dp"
+                    android:gravity="center_vertical"
+                    app:drawableStartCompat="@drawable/ic_order_curbside"
+                    app:drawableTint="@color/primary_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/delivery_or_pickup_type_title"
+                    tools:text="Curbside at Dumbo" />
+
+                <TextView
+                    android:id="@+id/order_number_title"
+                    style="@style/ShakeShackTextView.BodyNormal.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:text="@string/order_number_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/delivery_or_pickup_description" />
+
+                <TextView
+                    android:id="@+id/order_number"
+                    style="@style/ShakeShackTextView.BodyNormal.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/order_number_title"
+                    tools:text="#90229543" />
+
+                <TextView
+                    android:id="@+id/payment_title"
+                    style="@style/ShakeShackTextView.BodyNormal.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:text="@string/checkout_payment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/order_number" />
+
+                <TextView
+                    android:id="@+id/payment_description"
+                    style="@style/ShakeShackTextView.BodyNormal.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/size_10dp"
+                    android:text="@string/checkout_ending_in"
+                    app:drawableStartCompat="@drawable/ic_vector_mastercard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_title" />
+
+                <View
+                    android:id="@+id/product_section_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size_1dp"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:background="@color/grey_200"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_description" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ordered_product_recycler_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_section_separator" />
+
+                <View
+                    android:id="@+id/price_total_section_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size_1dp"
+                    android:layout_marginVertical="@dimen/size_10dp"
+                    android:background="@color/grey_200"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ordered_product_recycler_view" />
+
+                <TextView
+                    android:id="@+id/subtotal_title"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:text="@string/checkout_subtotal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/price_total_section_separator" />
+
+                <TextView
+                    android:id="@+id/subtotal_text"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/price_total_section_separator"
+                    tools:text="$15.87" />
+
+                <TextView
+                    android:id="@+id/taxes_title"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/checkout_taxes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/subtotal_title" />
+
+                <TextView
+                    android:id="@+id/taxes_text"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/subtotal_text"
+                    tools:text="$2.65" />
+
+                <TextView
+                    android:id="@+id/discounts_title"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/checkout_discounts"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/taxes_title" />
+
+                <TextView
+                    android:id="@+id/discounts_text"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/taxes_text"
+                    tools:text="$0.0" />
+
+                <TextView
+                    android:id="@+id/tip_title"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/checkout_tip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/discounts_title" />
+
+                <TextView
+                    android:id="@+id/tip_text"
+                    style="@style/ShakeShackTextView.BodySmall.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/discounts_text"
+                    tools:text="$2.78" />
+
+                <TextView
+                    android:id="@+id/total_title"
+                    style="@style/ShakeShackTextView.BodySmall.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/checkout_total"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tip_text" />
+
+                <TextView
+                    android:id="@+id/total_text"
+                    style="@style/ShakeShackTextView.BodySmall.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tip_text"
+                    tools:text="$7.8" />
+
+                <TextView
+                    android:id="@+id/get_support_link"
+                    style="@style/ShakeShackTextView.BodyNormal.Grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/size_14dp"
+                    android:text="@string/get_support_link"
+                    android:textColorLink="@color/grey_500"
+                    app:layout_constraintTop_toBottomOf="@id/total_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/reorder_fab"
+        style="@style/ShakeShackButton.Text.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_16dp"
+        android:text="@string/reorder"
+        app:layout_anchor="@id/scroll_view"
+        app:layout_anchorGravity="bottom|end" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

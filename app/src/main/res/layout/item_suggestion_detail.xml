@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/first_suggestion_item_image"
+        android:layout_width="@dimen/size_120dp"
+        android:layout_height="@dimen/size_120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blossom_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+    <TextView
+        android:id="@+id/first_suggestion_item_title"
+        style="@style/ShakeShackTextView.BodySmall.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="Cherry Blossom Shake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_suggestion_item_image" />
+
+    <TextView
+        android:id="@+id/first_suggestion_item_info"
+        style="@style/ShakeShackTextView.BodySmall.Grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$3.20 • 770 cals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_suggestion_item_title" />
+
+    <TextView
+        android:id="@+id/first_suggestion_item_reason"
+        style="@style/ShakeShackTextView.BodySmall.Grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_25dp"
+        android:maxLines="2"
+        android:text="Wanna Try something new today?"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_suggestion_item_info" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_first_suggestion_items_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_7dp"
+        android:layout_marginBottom="@dimen/size_24dp"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="@color/primary_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_suggestion_item_reason"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/close_order_button"
+        android:layout_width="@dimen/size_48dp"
+        android:layout_height="@dimen/size_48dp"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/size_20dp"
+        android:scaleType="centerCrop"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/ic_close"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="@dimen/size_48dp"
+        app:maxImageSize="@dimen/size_11dp"
+        app:tint="@color/black" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_this_area_button"
+        style="@style/ShakeShackButton.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/search_this_area"
+        android:visibility="gone"
+        app:layout_anchor="@+id/pick_up_info_bottom_sheet"
+        app:layout_anchorGravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/pick_up_info_bottom_sheet"
+        style="?attr/bottomSheetStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_peekHeight="200dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <include
+            android:id="@+id/pick_up_info_view"
+            layout="@layout/layout_pick_up_info" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

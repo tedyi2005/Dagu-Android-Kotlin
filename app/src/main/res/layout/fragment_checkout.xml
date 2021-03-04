@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar"
+        tools:layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:layout_marginBottom="40dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tray_layout"
+                android:layout_width="@dimen/checkout_tray_width"
+                android:layout_height="@dimen/checkout_tray_height"
+                android:background="@drawable/tray"
+                android:rotation="10"
+                app:layout_constraintBottom_toBottomOf="@id/checkout_title"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/tray_food_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/size_4dp"
+                    android:src="@drawable/burger"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toTopOf="@id/tray_food_item_4"
+                    app:layout_constraintEnd_toStartOf="@id/tray_food_item_2"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_max="@dimen/size_40dp" />
+
+                <ImageView
+                    android:id="@+id/tray_food_item_2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/size_4dp"
+                    android:src="@drawable/burger"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toTopOf="@id/tray_food_item_4"
+                    app:layout_constraintEnd_toStartOf="@id/tray_food_item_3"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toEndOf="@id/tray_food_item_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_max="@dimen/size_40dp" />
+
+                <ImageView
+                    android:id="@+id/tray_food_item_3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/size_4dp"
+                    android:src="@drawable/burger"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toTopOf="@id/tray_food_item_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toEndOf="@id/tray_food_item_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_max="@dimen/size_40dp" />
+
+                <ImageView
+                    android:id="@+id/tray_food_item_4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/size_4dp"
+                    android:src="@drawable/burger"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tray_food_item_5"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tray_food_item_1"
+                    app:layout_constraintWidth_max="@dimen/size_40dp" />
+
+                <ImageView
+                    android:id="@+id/tray_food_item_5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/size_4dp"
+                    android:src="@drawable/burger"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tray_food_item_6"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toEndOf="@id/tray_food_item_4"
+                    app:layout_constraintTop_toBottomOf="@id/tray_food_item_1"
+                    app:layout_constraintWidth_max="@dimen/size_40dp" />
+
+                <ImageView
+                    android:id="@+id/tray_food_item_6"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/size_4dp"
+                    android:src="@drawable/burger"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tray_food_item_overflow_circle"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toEndOf="@id/tray_food_item_5"
+                    app:layout_constraintTop_toBottomOf="@id/tray_food_item_1"
+                    app:layout_constraintWidth_max="@dimen/size_40dp" />
+
+                <TextView
+                    android:id="@+id/tray_food_item_overflow_circle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/ic_black_circle"
+                    android:fontFamily="@font/futura_lt"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ss_body_extra_small_text_size"
+                    android:visibility="gone"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="@dimen/size_40dp"
+                    app:layout_constraintStart_toEndOf="@id/tray_food_item_6"
+                    app:layout_constraintTop_toBottomOf="@id/tray_food_item_1"
+                    app:layout_constraintWidth_max="@dimen/size_40dp"
+                    tools:text="+2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/checkout_title"
+                style="@style/ShakeShackTextView.HeadingH2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout_okay_let_s_wrap_up"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hand_off_type_location_title_text_view"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="@string/checkout_pickup_from"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkout_title" />
+
+            <TextView
+                android:id="@+id/hand_off_location_text_view"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Old Fulton St, Brooklyn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_type_location_title_text_view" />
+
+            <ImageButton
+                android:id="@+id/hand_off_location_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_vector_edit"
+                app:layout_constraintBottom_toBottomOf="@id/hand_off_location_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/hand_off_type_location_title_text_view" />
+
+
+            <View
+                android:id="@+id/hand_off_location_separator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_1dp"
+                android:layout_marginVertical="@dimen/size_20dp"
+                android:background="@color/grey_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_location_text_view" />
+
+            <ImageView
+                android:id="@+id/hand_off_mode_image_view"
+                android:layout_width="@dimen/size_26dp"
+                android:layout_height="@dimen/size_26dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_order_indoor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_location_separator"
+                app:tint="@color/primary_green" />
+
+            <TextView
+                android:id="@+id/hand_off_mode_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/walk_up_window"
+                app:layout_constraintStart_toEndOf="@id/hand_off_mode_image_view"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_location_separator" />
+
+            <TextView
+                android:id="@+id/hand_off_mode_description"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_4dp"
+                android:text="@string/hand_off_mode_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_mode_title" />
+
+            <ImageButton
+                android:id="@+id/hand_off_mode_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_vector_edit"
+                app:layout_constraintBottom_toBottomOf="@id/hand_off_mode_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/hand_off_mode_title" />
+
+            <View
+                android:id="@+id/hand_off_mode_separator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_1dp"
+                android:layout_marginVertical="@dimen/size_20dp"
+                android:background="@color/grey_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_mode_description" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/hand_off_mode_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierAllowsGoneWidgets="true"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="hand_off_location_edit_button,hand_off_location_separator,
+                hand_off_type_location_title_text_view,hand_off_location_text_view,hand_off_mode_description,
+                hand_off_mode_edit_button,hand_off_mode_image_view, hand_off_mode_separator,hand_off_mode_title" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/hand_off_mode_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="hand_off_mode_title,hand_off_mode_separator,
+                hand_off_mode_image_view,hand_off_mode_description,hand_off_mode_edit_button" />
+
+            <TextView
+                android:id="@+id/pickup_time_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:text="@string/checkout_pickup_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hand_off_mode_barrier" />
+
+            <TextView
+                android:id="@+id/pickup_time_description"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASAP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pickup_time_title" />
+
+            <ImageButton
+                android:id="@+id/pickup_time_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_vector_edit"
+                app:layout_constraintBottom_toBottomOf="@id/pickup_time_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/pickup_time_title" />
+
+            <View
+                android:id="@+id/pickup_section_separator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_4dp"
+                android:layout_marginVertical="@dimen/size_20dp"
+                android:background="@color/grey_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pickup_time_description" />
+
+            <TextView
+                android:id="@+id/contact_info_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_30dp"
+                android:text="@string/checkout_contact_info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pickup_section_separator" />
+
+            <TextView
+                android:id="@+id/contact_info_sign_in_text"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@id/contact_info_title"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/contact_info_description"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katie, (871) 353 8373"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_info_title" />
+
+            <ImageButton
+                android:id="@+id/contact_info_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_vector_edit"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/contact_info_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/contact_info_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contact_info_email_input_layout"
+                style="@style/ShakeShackTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_info_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contact_info_email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Email address"
+                    android:hint="@string/email_address" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/contact_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierAllowsGoneWidgets="true"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="contact_info_email_input_layout, contact_info_description" />
+
+            <View
+                android:id="@+id/contact_section_separator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_4dp"
+                android:layout_marginVertical="@dimen/size_20dp"
+                android:background="@color/grey_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_barrier" />
+
+            <TextView
+                android:id="@+id/payment_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_30dp"
+                android:text="@string/checkout_payment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_section_separator" />
+
+            <ImageButton
+                android:id="@+id/payment_expandable_button"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_vector_arrow_down"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/payment_title"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/payment_description"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/size_10dp"
+                android:text="@string/checkout_ending_in"
+                app:drawableStartCompat="@drawable/ic_vector_mastercard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_title" />
+
+            <ImageButton
+                android:id="@+id/payment_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_vector_edit"
+                app:layout_constraintBottom_toBottomOf="@id/payment_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/payment_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_input_layout"
+                style="@style/ShakeShackTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/card_info_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Email address"
+                    android:hint="@string/checkout_card_number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/payment_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierAllowsGoneWidgets="true"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="payment_input_layout, payment_description, payment_title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:background="?attr/shakeShackAlternativeBg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_barrier" />
+
+            <TextView
+                android:id="@+id/tip_section_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="@string/checkout_tip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_barrier" />
+
+            <TextView
+                android:id="@+id/tip_section_description"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout_reward_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tip_section_title" />
+
+            <HorizontalScrollView
+                android:id="@+id/tip_chips_scrollview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tip_section_description">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/tip_chips_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedChip="@+id/percent_chip_2"
+                    app:selectionRequired="true"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="10%" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/percent_chip_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="15%" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="20%" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/checkout_other" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tip_input_layout"
+                style="@style/ShakeShackTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/size_20dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tip_chips_scrollview">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tip_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_custom_amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:text="@string/default_tip_value" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/tip_section_separator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_1dp"
+                android:layout_marginVertical="@dimen/size_20dp"
+                android:background="@color/grey_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tip_input_layout" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/tip_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierAllowsGoneWidgets="true"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tip_section_title, tip_section_description, tip_chips_scrollview, tip_section_separator " />
+
+            <TextView
+                android:id="@+id/review_order_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="@string/checkout_review_your_order"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tip_barrier" />
+
+            <LinearLayout
+                android:id="@+id/checkout_items_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/review_order_title">
+
+                <include layout="@layout/item_checkout_detail" />
+
+                <include layout="@layout/item_checkout_detail" />
+
+                <include layout="@layout/item_checkout_detail" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/coupon_code_input_layout"
+                style="@style/ShakeShackTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                app:endIconDrawable="@drawable/ic_right_arrow"
+                app:endIconMode="custom"
+                app:endIconTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkout_items_container">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/coupon_code_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Coupon Code"
+                    android:hint="@string/checkout_have_a_coupon_code"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:lines="1"
+                    android:paddingTop="@dimen/size_35dp"
+                    android:paddingBottom="@dimen/size_10dp"
+                    android:textAllCaps="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/subtotal_title"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="@string/checkout_subtotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coupon_code_input_layout" />
+
+            <TextView
+                android:id="@+id/subtotal_text"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="$15.87"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coupon_code_input_layout" />
+
+            <TextView
+                android:id="@+id/taxes_title"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/checkout_taxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtotal_title" />
+
+            <TextView
+                android:id="@+id/taxes_text"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="$2.65"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtotal_text" />
+
+            <TextView
+                android:id="@+id/discounts_title"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/checkout_discounts"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taxes_title" />
+
+            <TextView
+                android:id="@+id/discounts_text"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="$0.0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taxes_text" />
+
+            <TextView
+                android:id="@+id/tip_title"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/checkout_tip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/discounts_title" />
+
+            <TextView
+                android:id="@+id/tip_text"
+                style="@style/ShakeShackTextView.BodySmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="$2.78"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/discounts_text" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/summary_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierAllowsGoneWidgets="true"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="subtotal_text, subtotal_title, taxes_text, taxes_title, discounts_text, discounts_title, tip_text, tip_title" />
+
+            <TextView
+                android:id="@+id/total_title"
+                style="@style/ShakeShackTextView.BodySmall.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/checkout_total"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/summary_barrier" />
+
+            <TextView
+                android:id="@+id/total_text"
+                style="@style/ShakeShackTextView.BodySmall.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="$21.30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/summary_barrier" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pay_button"
+                style="@style/ShakeShackButton.Text.Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="@string/checkout_pay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/total_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/pay_fab"
+        style="@style/ShakeShackButton.Text.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginBottom="@dimen/size_40dp"
+        android:text="@string/checkout_pay"
+        app:layout_anchor="@id/scroll_view"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

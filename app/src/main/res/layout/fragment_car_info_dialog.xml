@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/car_info_dialog_title"
+        style="@style/ShakeShackTextView.HeadingH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_20dp"
+        android:layout_marginTop="@dimen/size_25dp"
+        app:layout_constraintBottom_toTopOf="@id/car_info_dialog_title_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/car_info_dialog_title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_25dp"
+        android:background="@color/grey_100"
+        app:layout_constraintTop_toBottomOf="@id/car_info_dialog_title" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_300dp"
+        app:layout_constraintBottom_toTopOf="@id/car_info_dialog_buttons_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/car_info_dialog_title_divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/car_type_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_sedan" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_suv_crossover" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_van_minivan" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_truck_pickup" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_hatchback" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_convertible" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_type_sportscar" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/car_color_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_white" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_black" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_grey" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_blue" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_red" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_brown" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_green" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_yellow" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15dp"
+                    android:paddingStart="@dimen/size_20dp"
+                    android:paddingEnd="@dimen/size_20dp"
+                    android:text="@string/car_color_gold_tan_silver" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/car_info_dialog_buttons_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_25dp"
+        android:background="@color/grey_100"
+        app:layout_constraintBottom_toTopOf="@id/car_info_dialog_ok" />
+
+    <TextView
+        android:id="@+id/car_info_dialog_ok"
+        style="@style/ShakeShackButton.Text.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/car_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/car_info_dialog_cancel"
+        style="@style/ShakeShackButton.Text.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/car_info_dialog_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

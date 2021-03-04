@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/close_location_button"
+        android:layout_width="@dimen/size_48dp"
+        android:layout_height="@dimen/size_48dp"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/size_20dp"
+        android:scaleType="centerCrop"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/ic_close"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="@dimen/size_48dp"
+        app:maxImageSize="@dimen/size_11dp"
+        app:tint="@color/black" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_this_area_button"
+        style="@style/ShakeShackButton.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/search_this_area"
+        android:visibility="gone"
+        app:layout_anchor="@+id/location_bottom_sheet"
+        app:layout_anchorGravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/location_bottom_sheet"
+        style="?attr/bottomSheetStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/size_20dp"
+        android:paddingEnd="@dimen/size_20dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            android:layout_toStartOf="@id/close_bottom_sheet_btn"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/primary_green"
+            app:tabInlineLabel="true"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/primary_green"
+            app:tabTextAppearance="@style/ShakeShakeTabTextAppearance"
+            app:tabTextColor="?attr/shakeShackIconTint" />
+
+        <ImageButton
+            android:id="@+id/close_bottom_sheet_btn"
+            android:layout_width="@dimen/size_32dp"
+            android:layout_height="@dimen/size_32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginEnd="@dimen/size_22dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close_button_description"
+            android:src="@drawable/ic_close" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/location_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabs" />
+
+        <ProgressBar
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/size_20dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

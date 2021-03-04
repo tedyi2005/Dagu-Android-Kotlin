@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ShakeShack.Main">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="shakeShackIconTint">@color/white</item>
+        <item name="shakeShackLogo">@drawable/ic_vector_home_logo_green_burger_white_text</item>
+        <item name="shakeShackAlternativeBg">@color/grey_900</item>
+    </style>
+
+    <style name="ThemeOverlay.ShakeShack.Main" parent="@style/ThemeOverlay.MaterialComponents.Dark" >
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/grey_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.ShakeShack.Main.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dark" />
+
+</resources>

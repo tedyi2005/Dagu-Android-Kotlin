@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShakeShackTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TintedNavigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="tint">@color/white</item>
+    </style>
+
+</resources>

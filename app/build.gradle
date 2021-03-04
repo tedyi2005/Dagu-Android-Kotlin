@@ -1,0 +1,206 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+}
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: "org.sonarqube"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+
+    defaultConfig {
+        applicationId 'com.dagu.android'
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode project.hasProperty('versionCode') ? project.property('versionCode') as int : 1
+        versionName project.hasProperty('versionName') ? project.property('versionName') : '0.0.1'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('file:../keystore/shake-shack.jks')
+            storePassword '^P/-VidL;w8~\'emE'
+            keyAlias 'shack'
+            keyPassword '^P/-VidL;w8~\'emE'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            manifestPlaceholders << [
+                    crashlyticsApiKey   : '0c1186fee4dca0c960bcde419a540f0ab683a122',
+                    crashlyticsApiSecret: '26b3fead44806afc68ea36372e57eba19bf205bbd6b6c5f5f490fca3ef522f9e'
+            ]
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders << [
+                    crashlyticsApiKey   : '5038282d570e74f8d4d81a3dbb4c9a41cd5be6f6',
+                    crashlyticsApiSecret: '01dba8395add2f5cde2534a1a90a906356e3bd87a7f940a70371a9d40a383029'
+            ]
+        }
+    }
+
+    flavorDimensions 'endpoint'
+    productFlavors {
+        dev {
+            buildConfigField 'String', "OLO_KEY", '"diDPX9HHIcvbhzVHk8KDaNADqG8t6Jt7"'
+            buildConfigField 'String', "SSMA_CLIENT_ID", '"1d66Z0G3FVvcWrV5tSCKKxgQMrL7ICcj6cux6Z3A"'
+            buildConfigField 'String', "SSMA_CLIENT_SECRET", '"F5efByDBATYIrSDp4DuZUj9YwMZNlvfgWfntLM6nsjHBCQ3nDnz9yF4iXyn2QQ58PKzy5iyEFolSUY7KeCwVtYHbeEPeD3gG6h5EeejcJF0ZgE3pkAt1Zc3daAL66Xlt"'
+            buildConfigField 'int', 'CORPORATE_SHACK_VENDOR_ID', '117473'
+        }
+        staging {
+            isDefault true
+            buildConfigField 'String', 'OLO_KEY', '"diDPX9HHIcvbhzVHk8KDaNADqG8t6Jt7"'
+            buildConfigField 'String', 'SSMA_CLIENT_ID', '"1d66Z0G3FVvcWrV5tSCKKxgQMrL7ICcj6cux6Z3A"'
+            buildConfigField 'String', 'SSMA_CLIENT_SECRET', '"F5efByDBATYIrSDp4DuZUj9YwMZNlvfgWfntLM6nsjHBCQ3nDnz9yF4iXyn2QQ58PKzy5iyEFolSUY7KeCwVtYHbeEPeD3gG6h5EeejcJF0ZgE3pkAt1Zc3daAL66Xlt"'
+            buildConfigField 'int', 'CORPORATE_SHACK_VENDOR_ID', '117473'
+        }
+        prod {
+            buildConfigField 'String', 'OLO_KEY', '"khASFrZf8wZDsKrGsWS4nHgGAnzF8pf7"'
+            buildConfigField 'String', 'SSMA_CLIENT_ID', '"T45U515PtB25AaIuMjuVaPm2PTIBHadYNVIRqE9K"'
+            buildConfigField 'String', 'SSMA_CLIENT_SECRET', '"uWhh7lTCDXuQTEuVdoGectEhLjlLYNF9oAws0tF8BiLtnStWRSNQXzNEamBVLNsnj7gEnlHBqw3evomiUjMC2CXKsrbt7RQQj2tyu9WzCBKRF4M9wmVdDNQczxdcBEJy"'
+            buildConfigField 'int', 'CORPORATE_SHACK_VENDOR_ID', '37774'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        if (variant.getName() == 'prodRelease') {
+            variant.buildConfigField 'boolean', 'RELEASE', 'true'
+        } else {
+            variant.buildConfigField 'boolean', 'RELEASE', 'false'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets.all {
+        java.srcDir("src/$name/kotlin")
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+sonarqube {
+    androidVariant 'stagingDebug'
+
+    properties {
+        property 'sonar.host.url', 'https://sonarcloud.io'
+        property 'sonar.organization', 'shake-shack-engineering'
+        property 'sonar.projectKey', 'Shake-Shack-Engineering_shake-shack-android'
+        property 'sonar.projectName', 'Shake Shack Android'
+        property 'sonar.sources', 'src/main'
+        property 'sonar.coverage.exclusions', '**/*'
+    }
+}
+
+dependencies {
+    def appcompatVersion = '1.2.0'
+    def activityVersion = '1.2.0'
+    def fragmentVersion = '1.3.0'
+    def annotationVersion = '1.1.0'
+    def constraintLayoutVersion = '2.0.4'
+    def lifecycleVersion = '2.3.0'
+    def recyclerViewVersion = '1.1.0'
+    def materialVersion = '1.3.0'
+    def androidxHiltVersion = '1.0.0-alpha03'
+    def dataStoreVersion = "1.0.0-alpha07"
+    def kotlinCoroutinesVersion = '1.3.9'
+    def crashlyticsVersion = '17.3.1'
+    def libPhoneNumberVersion = '8.12.11'
+
+    // First-party dependencies
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "androidx.activity:activity-ktx:$activityVersion"
+    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
+    implementation "androidx.annotation:annotation:$annotationVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "com.google.firebase:firebase-crashlytics-ktx:$crashlyticsVersion"
+    kapt "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    implementation "android.arch.lifecycle:extensions:$lifecycleVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$navVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$androidxHiltVersion"
+    kapt "androidx.hilt:hilt-compiler:$androidxHiltVersion"// Preferences DataStore
+    implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
+    implementation "androidx.datastore:datastore-core:$dataStoreVersion"
+    implementation "com.googlecode.libphonenumber:libphonenumber:$libPhoneNumberVersion"
+
+    // Map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.maps.android:maps-utils-v3-ktx:2.1.3'
+
+    //play service auth
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-basement:17.6.0'
+
+    // Third-party dependencies
+    def retrofitVersion = '2.9.0'
+    def facebookLoginVersion = '8.1.0'
+    def okHttp3LoggingInterceptorVersion = '3.8.1'
+    def picassoVersion = '2.71828'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3LoggingInterceptorVersion"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "com.facebook.android:facebook-login:$facebookLoginVersion"
+
+    // Dependencies for testing
+    def junitVersion = '4.13'
+    def androidCoreTestingVersion = '2.1.0'
+    def kotlinxCoroutinesTestVersion = '1.3.2'
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinxCoroutinesTestVersion"
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestingVersion"
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentVersion"
+
+    // Third party dependencies for testing
+    def mockitoKotlinVersion = '2.2.0'
+    def turbineVersion = '0.2.1'
+
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    testImplementation "app.cash.turbine:turbine:$turbineVersion"
+
+}

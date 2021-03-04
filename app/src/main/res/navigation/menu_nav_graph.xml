@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_nav_graph"
+    app:startDestination="@id/menu_category_fragment">
+
+    <fragment
+        android:id="@+id/menu_category_fragment"
+        android:name="com.dagu.android.presentation.menu.MenuCategoryFragment"
+        android:label="MenuCategoryFragment"
+        tools:layout="@layout/fragment_menu_category">
+        <action
+            android:id="@+id/action_menu_category_fragment_to_product_detail_fragment"
+            app:destination="@id/product_detail_fragment"/>
+        <action
+            android:id="@+id/action_menu_category_fragment_to_tray_detail_fragment"
+            app:destination="@id/tray_detail_fragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_menu_category_fragment_to_favorites_fragment"-->
+<!--            app:destination="@id/favorites_fragment" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/product_detail_fragment"
+        android:name="com.dagu.android.presentation.pdp.ProductDetailPageFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail_page" >
+        <argument
+            android:name="product"
+            app:argType="com.dagu.android.data.menu.Product"
+            app:nullable="false" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/favorites_fragment"-->
+<!--        android:name="daguid.presentation.favorites.FavoritesFragment"-->
+<!--        android:label="FavoritesFragment" />-->
+
+    <action
+        android:id="@+id/checkout_menu_action"
+        app:destination="@+id/checkout_nav_graph" />
+
+    <include app:graph="@navigation/checkout_nav_graph" />
+</navigation>

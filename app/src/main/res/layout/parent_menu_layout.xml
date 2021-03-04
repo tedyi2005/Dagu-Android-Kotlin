@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <TextView
+        android:id="@+id/category_title"
+        style="@style/ShakeShackTextView.HeadingH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_20dp"
+        android:textAllCaps="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/zigzag_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_20dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_zigzag_line"
+        android:visibility="gone" />
+
+</LinearLayout>

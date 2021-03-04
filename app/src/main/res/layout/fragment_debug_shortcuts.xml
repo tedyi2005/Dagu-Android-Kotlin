@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="@dimen/size_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/all_locations_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp"
+            android:text="View all locations" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/get_support"
+            style="@style/ShakeShackButton.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp"
+            android:text="Get Support" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/refresh_test_button"
+            style="@style/ShakeShackButton.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp"
+            android:text="Invalidate Token\nand get new one" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tray_detail_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp"
+            android:text="Show tray detail from main nav" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

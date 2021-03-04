@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tray_variant_picker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/size_20dp"
+    android:layout_marginBottom="@dimen/size_4dp"
+    android:background="@drawable/generic_bubble_background"
+    android:elevation="@dimen/size_5dp"
+    android:paddingStart="@dimen/size_15dp"
+    android:paddingTop="@dimen/size_10dp"
+    android:paddingEnd="@dimen/size_8dp"
+    android:paddingBottom="@dimen/size_15dp">
+
+    <RadioGroup
+        android:id="@+id/tray_variant_picker_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/tray_variant_picker_view_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tray_variant_picker_view_all"
+        style="@style/ShakeShackTextView.BodyExtraSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:paddingHorizontal="@dimen/size_7dp"
+        android:paddingTop="@dimen/size_7dp"
+        android:text="@string/view_all"
+        android:textColor="@color/grey_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

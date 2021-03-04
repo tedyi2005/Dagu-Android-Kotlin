@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/pick_up_info_first_step_constraint_set">
+        <Constraint
+            android:id="@+id/pick_up_info_first_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_60dp"
+            android:text="@string/order_received"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_instructions_view_separator">
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="21" />
+
+
+        </Constraint>
+
+
+        <Constraint
+            android:id="@+id/pick_up_info_first_step_detail"
+            style="@style/ShakeShackTextView.BodyNormal.Grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_first_step"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_first_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_first_step_barrier">
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="#757575" />
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="14" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_step_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_second_step"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_second_step">
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_order_status_image_view"
+            android:layout_width="@dimen/size_28dp"
+            android:layout_height="@dimen/size_28dp"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_first_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_order_received_green_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginStart="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_12dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_first_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_first_to_second_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/size_12dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toBottomOf="@id/pick_up_info_second_step"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_order_status_image_view" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_green_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:background="@drawable/green_stroke_circle"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_second_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_second_to_third_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/size_12dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toBottomOf="@id/pick_up_info_third_step"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_second_green_circle" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/pick_up_info_first_to_second_constraint_set">
+        <Constraint
+            android:id="@+id/pick_up_info_first_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_instructions_view_separator">
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="14" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_first_step_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_first_step"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_first_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_step_time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_first_step_detail"
+            style="@style/ShakeShackTextView.BodyNormal.Grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_first_step_barrier">
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="#000000" />
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="21" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_step_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_second_step"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_second_step">
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_order_status_image_view"
+            android:layout_width="@dimen/size_28dp"
+            android:layout_height="@dimen/size_28dp"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_second_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_green_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_second_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_order_received_green_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_12dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_first_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_first_to_second_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toTopOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_order_received_green_circle" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_green_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:background="@drawable/green_stroke_circle"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_second_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_second_to_third_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/size_12dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toBottomOf="@id/pick_up_info_third_step"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_order_status_image_view" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/pick_up_info_second_to_third_constraint_set"
+        app:deriveConstraintsFrom="@id/pick_up_info_first_to_second_constraint_set">
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_first_step_barrier">
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="14" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_step_time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/pick_up_info_second_step_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_second_barrier">
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="#000000" />
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="21" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_third_step"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_third_step">
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_instructions_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_third_detail"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_third_detail" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_order_status_image_view"
+            android:layout_width="@dimen/size_28dp"
+            android:layout_height="@dimen/size_28dp"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_third_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_second_green_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_second_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_12dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_first_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_to_fourth_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toTopOf="@id/pick_up_info_fourth_circle"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_order_status_image_view" />
+
+
+        <Constraint
+            android:id="@+id/pick_up_second_to_third_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/size_12dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toTopOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_second_green_circle" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/pick_up_info_third_to_fourth_constraint_set"
+        app:deriveConstraintsFrom="@id/pick_up_info_second_to_third_constraint_set">
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_second_step">
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="14" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_fourth_step_time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/pick_up_info_fourth_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_instructions_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_fourth_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_third_barrier">
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="#000000" />
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="21" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/pick_up_info_fourth_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_fourth_step"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_fourth_step" />
+
+
+        <Constraint
+            android:id="@+id/pick_up_info_order_status_image_view"
+            android:layout_width="@dimen/size_28dp"
+            android:layout_height="@dimen/size_28dp"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_fourth_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_fourth_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_circle"
+            android:layout_width="@dimen/size_7dp"
+            android:layout_height="@dimen/size_7dp"
+            android:layout_marginTop="@dimen/size_12dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toTopOf="@id/pick_up_info_third_step" />
+
+        <Constraint
+            android:id="@+id/pick_up_info_third_to_fourth_line"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="0dp"
+            android:background="@color/grey_200"
+            app:layout_constraintBottom_toTopOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintEnd_toEndOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintStart_toStartOf="@id/pick_up_info_order_status_image_view"
+            app:layout_constraintTop_toBottomOf="@id/pick_up_info_third_circle" />
+
+
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/pick_up_info_preparing_order_transition"
+        app:constraintSetEnd="@+id/pick_up_info_first_to_second_constraint_set"
+        app:constraintSetStart="@id/pick_up_info_first_step_constraint_set"
+        app:duration="1000" />
+
+    <Transition
+        android:id="@+id/pick_up_info_ready_for_pick_up_transition"
+        app:constraintSetEnd="@id/pick_up_info_second_to_third_constraint_set"
+        app:constraintSetStart="@+id/pick_up_info_first_to_second_constraint_set"
+        app:duration="1000" />
+
+    <Transition
+        android:id="@+id/pick_up_info_picked_up_transition"
+        app:constraintSetEnd="@+id/pick_up_info_third_to_fourth_constraint_set"
+        app:constraintSetStart="@id/pick_up_info_second_to_third_constraint_set"
+        app:duration="1000" />
+</MotionScene>

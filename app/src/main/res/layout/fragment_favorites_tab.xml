@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/add_item_to_tray_scene">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/size_20dp">
+
+            <TextView
+                android:id="@+id/favorites_title_textview"
+                style="@style/ShakeShackTextView.HeadingH3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_28dp"
+                android:text="@string/your_favorite_list_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/favorites_view_all_textview"
+                style="@style/ShakeShackTextView.BodyNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_32dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/view_all"
+                android:textColor="@color/grey_500"
+                app:layout_constraintBottom_toBottomOf="@id/favorites_title_textview"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favorites_horizontal_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/size_30dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/favorites_title_textview"
+                tools:context=".presentation.location.LocationListFragment"
+                tools:listitem="@layout/item_menu_product" />
+
+            <TextView
+                android:id="@+id/favorites_vertical_recyclerview_title_textview"
+                style="@style/ShakeShackTextView.HeadingH3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_28dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:layout_marginBottom="@dimen/size_30dp"
+                android:text="@string/burgers"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/favorites_horizontal_recycler" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favorites_vertical_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/favorites_vertical_recyclerview_title_textview"
+                tools:context=".presentation.location.LocationListFragment"
+                tools:listitem="@layout/item_menu_product" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/tray"
+        layout="@layout/overlay_tray"
+        android:layout_width="@dimen/size_80dp"
+        android:layout_height="@dimen/size_80dp"
+        android:layout_marginEnd="@dimen/size_20dp"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tray_guideline" />
+
+
+    <include
+        android:id="@+id/tray_options"
+        layout="@layout/overlay_tray_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_20dp"
+        android:nestedScrollingEnabled="false"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tray" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tray_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tray_amount_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+
+    <ImageView
+        android:id="@+id/product_selected_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_280dp"
+        android:layout_marginHorizontal="@dimen/size_6dp"
+        android:layout_marginStart="@dimen/size_25dp"
+        android:layout_marginTop="@dimen/size_30dp"
+        android:layout_marginEnd="@dimen/size_25dp"
+        android:alpha="0"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/second_item_image_view"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/size_40dp"
+        android:visibility="gone"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintBottom_toBottomOf="@+id/tray"
+        app:layout_constraintEnd_toEndOf="@+id/tray"
+        app:layout_constraintStart_toStartOf="@+id/tray"
+        app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    <ImageView
+        android:id="@+id/third_item_image_view"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/size_40dp"
+        android:visibility="gone"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintBottom_toBottomOf="@+id/tray"
+        app:layout_constraintEnd_toEndOf="@+id/tray"
+        app:layout_constraintStart_toStartOf="@+id/tray"
+        app:layout_constraintTop_toTopOf="@+id/tray" />
+
+    <ImageView
+        android:id="@+id/fourth_item_image_view"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/size_40dp"
+        android:visibility="gone"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintBottom_toBottomOf="@+id/tray"
+        app:layout_constraintEnd_toEndOf="@+id/tray"
+        app:layout_constraintStart_toStartOf="@+id/tray"
+        app:layout_constraintTop_toTopOf="@+id/tray" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

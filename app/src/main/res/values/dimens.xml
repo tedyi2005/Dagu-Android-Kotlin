@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Button Dimensions-->
+    <dimen name="ss_button_text_size">16sp</dimen>
+    <dimen name="ss_button_min_height">60dp</dimen>
+    <dimen name="ss_button_padding_lr">20dp</dimen>
+    <dimen name="ss_button_margin_lr">16dp</dimen>
+    <dimen name="ss_button_margin_tb">24dp</dimen>
+    <dimen name="ss_button_margin_tb_half">12dp</dimen>
+    <dimen name="ss_button_corner_radius">25dp</dimen>
+    <dimen name="ss_button_marginTop">12dp</dimen>
+
+    <dimen name="ss_widget_button_padding_lr">16dp</dimen>
+    <dimen name="ss_widget_button_padding_tb">12dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- text Size-->
+    <dimen name="ss_widget_edit_text_padding">14dp</dimen>
+    <dimen name="ss_text_corner_radius">2dp</dimen>
+
+    <dimen name="size_1dp">1dp</dimen>
+    <dimen name="size_2dp">2dp</dimen>
+    <dimen name="size_3dp">3dp</dimen>
+    <dimen name="size_4dp">4dp</dimen>
+    <dimen name="size_5dp">5dp</dimen>
+    <dimen name="size_6dp">6dp</dimen>
+    <dimen name="size_7dp">7dp</dimen>
+    <dimen name="size_8dp">8dp</dimen>
+    <dimen name="size_9dp">9dp</dimen>
+    <dimen name="size_10dp">10dp</dimen>
+    <dimen name="size_11dp">11dp</dimen>
+    <dimen name="size_12dp">12dp</dimen>
+    <dimen name="size_13dp">13dp</dimen>
+    <dimen name="size_14dp">14dp</dimen>
+    <dimen name="size_15dp">15dp</dimen>
+    <dimen name="size_16dp">16dp</dimen>
+    <dimen name="size_18dp">18dp</dimen>
+    <dimen name="size_19dp">19dp</dimen>
+    <dimen name="size_20dp">20dp</dimen>
+    <dimen name="size_22dp">22dp</dimen>
+    <dimen name="size_23dp">23dp</dimen>
+    <dimen name="size_24dp">24dp</dimen>
+    <dimen name="size_25dp">25dp</dimen>
+    <dimen name="size_26dp">26dp</dimen>
+    <dimen name="size_28dp">28dp</dimen>
+    <dimen name="size_30dp">30dp</dimen>
+    <dimen name="size_32dp">32dp</dimen>
+    <dimen name="size_34dp">34dp</dimen>
+    <dimen name="size_35dp">35dp</dimen>
+    <dimen name="size_36dp">36dp</dimen>
+    <dimen name="size_37dp">37dp</dimen>
+    <dimen name="size_40dp">40dp</dimen>
+    <dimen name="size_42dp">42dp</dimen>
+    <dimen name="size_48dp">48dp</dimen>
+    <dimen name="size_50dp">50dp</dimen>
+    <dimen name="size_57dp">57dp</dimen>
+    <dimen name="size_60dp">60dp</dimen>
+    <dimen name="size_62dp">62dp</dimen>
+    <dimen name="size_64dp">64dp</dimen>
+    <dimen name="size_67dp">67dp</dimen>
+    <dimen name="size_70dp">70dp</dimen>
+    <dimen name="size_73dp">73dp</dimen>
+    <dimen name="size_75dp">75dp</dimen>
+    <dimen name="size_77dp">77dp</dimen>
+    <dimen name="size_80dp">80dp</dimen>
+    <dimen name="size_95dp">95dp</dimen>
+    <dimen name="size_96dp">96dp</dimen>
+    <dimen name="size_100dp">100dp</dimen>
+    <dimen name="size_120dp">120dp</dimen>
+    <dimen name="size_280dp">280dp</dimen>
+    <dimen name="size_300dp">300dp</dimen>
+    <dimen name="size_368dp">368dp</dimen>
+    <dimen name="size_400dp">400dp</dimen>
+    <dimen name="size_500dp">500dp</dimen>
+
+    <!--Default Font Sizes-->
+    <dimen name="font_size_xxxlarge">25sp</dimen>
+    <dimen name="font_size_xxlarge">22sp</dimen>
+    <dimen name="font_size_xlarge">21sp</dimen>
+    <dimen name="font_size_large">20sp</dimen>
+    <dimen name="font_size_default">18sp</dimen>
+    <dimen name="font_size_medium_large">17sp</dimen>
+    <dimen name="font_size_medium">16sp</dimen>
+    <dimen name="font_size_medium_small">15sp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_xsmall">13sp</dimen>
+    <dimen name="font_size_xxsmall">12sp</dimen>
+    <dimen name="font_size_xxxsmall">11sp</dimen>
+    <dimen name="font_size_xxxxsmall">10sp</dimen>
+    <dimen name="font_size_alert_dialog_title">22sp</dimen>
+
+    <dimen name="ss_widget_text_padding">10dp</dimen>
+    <dimen name="ss_widget_text_margin">10dp</dimen>
+
+    <dimen name="ss_hero_desktop_text_size">60sp</dimen>
+    <dimen name="ss_hero_mobile_text_size">36sp</dimen>
+    <dimen name="ss_heading_h1_text_size">44sp</dimen>
+    <dimen name="ss_heading_h2_text_size">28sp</dimen>
+    <dimen name="ss_heading_h3_text_size">21sp</dimen>
+    <dimen name="ss_body_normal_text_size">16sp</dimen>
+    <dimen name="ss_body_small_text_size">14sp</dimen>
+    <dimen name="ss_body_extra_small_text_size">12sp</dimen>
+
+    <dimen name="ss_custom_action_bar_size">72dp</dimen>
+    <dimen name="side_menu_icon_size">48dp</dimen>
+    <dimen name="menu_tab_max_width">60dp</dimen>
+    <dimen name="tray_item_quantity_corner_radius">16dp</dimen>
+    <dimen name="checkout_tray_width">160dp</dimen>
+    <dimen name="checkout_tray_height">115dp</dimen>
+    <dimen name="checkout_button_margin">57dp</dimen>
+
+</resources>
+

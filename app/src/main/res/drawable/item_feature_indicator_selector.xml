@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- drawable for selected indicator -->
+    <item android:drawable="@drawable/ic_vector_feature_item_selected_indicator" android:state_selected="true" />
+    <!-- drawable for unselected indicator -->
+    <item android:drawable="@drawable/ic_vector_feature_item_indicator" android:state_selected="false" />
+</selector>

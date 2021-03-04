@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="@dimen/size_10dp"
+    android:background="@drawable/item_unselected_option_gray"
+    android:padding="@dimen/size_15dp">
+
+    <TextView
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Male"/>
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/grey_500" />
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aspect_ratio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_500dp"
+        android:background="@color/test_feature_bg_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/feature_widget_start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/feature_widget_end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.63" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/half_screen_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/feature_button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <ImageView
+            android:id="@+id/feature_image_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:scrollX="100dp"
+            android:src="@drawable/blossom_1"
+            app:layout_constraintBottom_toBottomOf="@+id/aspect_ratio_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/half_screen_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/feature_container_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/black_80_percent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20dp"
+            app:layout_constraintBottom_toTopOf="@id/feature_button_guideline"
+            app:layout_constraintEnd_toEndOf="@id/feature_widget_end_guideline"
+            app:layout_constraintStart_toStartOf="@+id/feature_widget_start_guideline">
+
+            <TextView
+                android:id="@+id/feature_text_view"
+                style="@style/ShakeShackTextView.HeroMobile.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:fontFamily="@font/futura_lt"
+                android:text="A Taste of Spring" />
+
+            <TextView
+                android:id="@+id/feature_sub_text_view"
+                style="@style/ShakeShackTextView.BodyNormal.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:fontFamily="@font/futura_lt"
+                android:includeFontPadding="false"
+                android:text="This is a subtitle. This is a subtitle. This is a subtitle." />
+
+            <LinearLayout
+                android:id="@+id/feature_button_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

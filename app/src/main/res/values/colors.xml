@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary_green">#55A122</color>
+    <color name="error_on_white">#EE0000</color>
+    <color name="error_on_black">#FF3C3C</color>
+    <color name="black">#000000</color>
+    <color name="black_80_percent">#C000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_900">#222222</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_550">#707070</color>
+    <color name="grey_500">#757575</color>
+    <color name="grey_300">#949494</color>
+    <color name="grey_200">#E6E6E6</color>
+    <color name="grey_100">#F4F4F4</color>
+    <color name="grey_50">#FAFAFA</color>
+    <color name="grey_background">#E5E5E5</color>
+    <color name="clickable_blue">#007AFF</color>
+    <color name="dialog_bar">#FAFAF8</color>
+    <color name="light_gray">#BBBBBB</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="grey_disabled_button">#707070</color>
+    <color name="dialog_background">#BF000000</color>
+
+    <!-- test color for home ViewPager2 background, should update dynamically in the future -->
+    <color name="test_feature_bg_color">#FF9F9B</color>
+
+</resources>

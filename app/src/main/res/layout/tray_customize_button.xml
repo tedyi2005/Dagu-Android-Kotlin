@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tray_customize_button"
+    android:layout_width="@dimen/size_95dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/size_20dp"
+    android:layout_marginBottom="@dimen/size_4dp"
+    android:background="@drawable/generic_bubble_background"
+    android:elevation="@dimen/size_5dp"
+    android:padding="@dimen/size_15dp">
+
+    <TextView
+        style="@style/ShakeShackTextView.BodyExtraSmall"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:layout_margin="0dp"
+        android:text="@string/customize"
+        android:textColor="@color/black"
+        android:textFontWeight="900"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

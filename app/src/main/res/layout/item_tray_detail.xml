@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size_20dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/tray_item_image"
+        android:layout_width="@dimen/size_48dp"
+        android:layout_height="@dimen/size_48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+    <TextView
+        android:id="@+id/tray_item_title"
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:text="ShackBurger"
+        app:layout_constraintEnd_toStartOf="@id/tray_item_quantity"
+        app:layout_constraintStart_toEndOf="@+id/tray_item_image"
+        app:layout_constraintTop_toTopOf="@id/tray_item_image" />
+
+    <TextView
+        android:id="@+id/tray_item_description"
+        style="@style/ShakeShackTextView.BodySmall.Grey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_2dp"
+
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Double, Extra bacon, more stuff"
+        app:layout_constraintEnd_toStartOf="@id/tray_item_quantity"
+        app:layout_constraintStart_toEndOf="@+id/tray_item_image"
+        app:layout_constraintTop_toBottomOf="@id/tray_item_title" />
+
+    <TextView
+        android:id="@+id/tray_item_quantity"
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_12dp"
+        android:background="@drawable/txt_grey_rounded_border_shape"
+        android:drawableEnd="@drawable/ic_vector_arrow_down"
+        android:drawablePadding="@dimen/size_8dp"
+        android:paddingStart="@dimen/size_16dp"
+        android:paddingTop="@dimen/size_8dp"
+        android:paddingEnd="@dimen/size_16dp"
+        android:paddingBottom="@dimen/size_8dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tray_item_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tray_item_price"
+        style="@style/ShakeShackTextView.BodySmall.Grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10.19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

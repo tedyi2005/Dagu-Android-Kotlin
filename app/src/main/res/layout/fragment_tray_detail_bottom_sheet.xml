@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/scrim_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="?attr/scrimBackground"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/background_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_halfExpandedRatio="0.6"
+        app:behavior_hideable="true"
+        app:behavior_skipCollapsed="true"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/tray_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            app:layoutDescription="@xml/fragment_tray_detail_scene">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkout_button"
+                style="@style/ShakeShackButton.Text.Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_34dp"
+                android:layout_marginEnd="@dimen/size_20dp"
+                android:text="@string/tray_detail_checkout"
+                app:layout_constraintBottom_toBottomOf="@id/checkout_button_guideline"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/checkout_button_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/tray_detail_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/size_30dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.motion.widget.MotionLayout
+                    android:id="@+id/tray_root_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutDescription="@xml/fragment_tray_detail_scene">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/top_guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="@dimen/size_32dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/bottom_guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_end="@dimen/size_32dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/start_guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="@dimen/size_32dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/end_guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="@dimen/size_32dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/half_screen_vertical_guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/tray_detail_title"
+                        style="@style/ShakeShackTextView.BodyNormal.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:text="@string/tray_detail_review_your_meal"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/close_tray_detail_bottom_sheet_button" />
+
+                    <TextView
+                        android:id="@+id/tray_detail_sign_in_text"
+                        style="@style/ShakeShackTextView.BodySmall.Grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/size_5dp"
+                        android:text="@string/sign_in"
+                        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/close_tray_detail_bottom_sheet_button" />
+
+                    <TextView
+                        android:id="@+id/tray_detail_user_initials_text_view"
+                        android:layout_width="@dimen/size_24dp"
+                        android:layout_height="@dimen/size_24dp"
+                        android:background="@drawable/background_circle_name_icon"
+                        android:fontFamily="@font/futura_lt"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/close_tray_detail_bottom_sheet_button" />
+
+                    <ImageButton
+                        android:id="@+id/close_tray_detail_bottom_sheet_button"
+                        android:layout_width="@dimen/size_32dp"
+                        android:layout_height="@dimen/size_32dp"
+                        android:layout_marginEnd="@dimen/size_22dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/close_button_description"
+                        android:src="@drawable/ic_close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_guideline" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/item_detail_recycler_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_40dp"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/tray_detail_title">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <View
+                        android:id="@+id/animationGuideView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/size_60dp"
+                        android:background="@color/transparent"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@id/item_detail_recycler_view"
+                        app:layout_constraintEnd_toEndOf="@id/item_detail_recycler_view"
+                        app:layout_constraintStart_toStartOf="@id/item_detail_recycler_view"
+                        app:layout_constraintTop_toTopOf="@id/item_detail_recycler_view" />
+
+                    <ImageButton
+                        android:id="@+id/add_missing_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_20dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_vector_add_missing"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/item_detail_recycler_view" />
+
+                    <TextView
+                        android:id="@+id/missing_anything_textview"
+                        style="@style/ShakeShackTextView.BodyNormal.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_16dp"
+                        android:text="@string/tray_detail_missing_anything"
+                        app:layout_constraintBottom_toBottomOf="@id/add_missing_button"
+                        app:layout_constraintStart_toEndOf="@id/add_missing_button"
+                        app:layout_constraintTop_toTopOf="@id/add_missing_button" />
+
+                    <View
+                        android:id="@+id/total_separator"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_1dp"
+                        android:layout_marginVertical="@dimen/size_30dp"
+                        android:background="@color/grey_200"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/add_missing_button" />
+
+                    <TextView
+                        android:id="@+id/subtotal_title"
+                        style="@style/ShakeShackTextView.BodySmall.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_30dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/tray_detail_subtotal_taxes"
+                        app:layout_constraintEnd_toStartOf="@+id/subtotal_amount"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/total_separator" />
+
+                    <TextView
+                        android:id="@+id/subtotal_amount"
+                        style="@style/ShakeShackTextView.BodySmall.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_30dp"
+                        android:text="$21.30"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/total_separator" />
+
+                    <TextView
+                        android:id="@+id/almost_there_title"
+                        style="@style/ShakeShackTextView.BodyNormal.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_60dp"
+                        android:text="@string/tray_detail_sweet_you_re_almost_there"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/subtotal_title" />
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/first_suggestion_item_image"
+                        android:layout_width="@dimen/size_120dp"
+                        android:layout_height="@dimen/size_120dp"
+                        android:layout_marginTop="@dimen/size_16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/blossom_1"
+                        app:layout_constraintEnd_toStartOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/almost_there_title"
+                        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+                    <TextView
+                        android:id="@+id/first_suggestion_item_title"
+                        style="@style/ShakeShackTextView.BodySmall.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Cherry Blossom Shake"
+                        app:layout_constraintEnd_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/first_suggestion_item_image" />
+
+                    <TextView
+                        android:id="@+id/first_suggestion_item_info"
+                        style="@style/ShakeShackTextView.BodySmall.Grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$3.20 • 770 cals"
+                        app:layout_constraintEnd_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/first_suggestion_item_title" />
+
+                    <TextView
+                        android:id="@+id/first_suggestion_item_reason"
+                        style="@style/ShakeShackTextView.BodySmall.Grey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_25dp"
+                        android:layout_marginTop="@dimen/size_25dp"
+                        android:layout_marginEnd="@dimen/size_25dp"
+                        android:maxLines="2"
+                        android:text="Wanna Try something new today?"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/first_suggestion_item_info" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/add_first_suggestion_items_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_7dp"
+                        android:layout_marginBottom="@dimen/size_80dp"
+                        android:src="@drawable/ic_plus"
+                        app:backgroundTint="@color/primary_green"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/first_suggestion_item_reason" />
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/second_suggestion_item_image"
+                        android:layout_width="@dimen/size_120dp"
+                        android:layout_height="@dimen/size_120dp"
+                        android:layout_marginTop="@dimen/size_16dp"
+                        android:layout_marginBottom="@dimen/size_50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/blossom_1"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/almost_there_title"
+                        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+                    <TextView
+                        android:id="@+id/second_suggestion_item_title"
+                        style="@style/ShakeShackTextView.BodySmall.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Cherry Blossom Shake"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/second_suggestion_item_image" />
+
+                    <TextView
+                        android:id="@+id/second_suggestion_item_info"
+                        style="@style/ShakeShackTextView.BodySmall.Grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$3.20 • 770 cals"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/second_suggestion_item_title" />
+
+                    <TextView
+                        android:id="@+id/second_suggestion_item_reason"
+                        style="@style/ShakeShackTextView.BodySmall.Grey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_25dp"
+                        android:layout_marginTop="@dimen/size_25dp"
+                        android:layout_marginEnd="@dimen/size_25dp"
+                        android:maxLines="2"
+                        android:text="Wanna Try something new today?"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/second_suggestion_item_info" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/add_second_suggestion_item_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_7dp"
+                        android:layout_marginBottom="@dimen/size_80dp"
+                        android:src="@drawable/ic_plus"
+                        app:backgroundTint="@color/primary_green"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintStart_toEndOf="@id/half_screen_vertical_guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/second_suggestion_item_reason" />
+
+                </androidx.constraintlayout.motion.widget.MotionLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

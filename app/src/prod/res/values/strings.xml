@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">981982838491218</string>
+    <string name="fb_login_protocol_scheme">fb981982838491218</string>
+    <string name="url_download_allergens">https://www.shakeshack.com/allergens</string>
+</resources>

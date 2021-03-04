@@ -1,0 +1,206 @@
+[
+  {
+    "price": "$5.89",
+    "basecalories": "570",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-BaconCheeseburger-2_md1547219926.jpeg",
+    "id": 3283894,
+    "minimumquantity": "1",
+    "description": "100% all-natural Angus beef cheeseburger with smoked cheddar cheese, Applewood Smoked Bacon, pickles and Shack BBQ sauce ",
+    "name": "BBQ Cheddar and Bacon Burger"
+  },
+  {
+    "price": "$4.89",
+    "basecalories": 780,
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Freshly ground proprietary Shack blend, served on a non-GMO potato bun",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-SingleShack-2_md1547219947.jpeg",
+    "id": 3284101,
+    "minimumquantity": "1",
+    "description": "Cheeseburger topped with lettuce, tomato and ShackSauce. 550/860/1050 cal",
+    "name": "ShackBurger",
+    "favorite": true
+  },
+  {
+    "price": "$3.9",
+    "basecalories": "560",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-ChickNShack-1_md1547219968.jpeg",
+    "id": 3284170,
+    "minimumquantity": "1",
+    "description": "Crispy chicken breast dusted with a guajillo and cayenne pepper blend and topped with slaw and pickles",
+    "name": "Hot Chick'n"
+  },
+  {
+    "price": "$4.3",
+    "basecalories": "300",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Chickn-ChicknBites6-1_md1547219988.jpeg",
+    "endhour": 24,
+    "id": 3284308,
+    "minimumquantity": "1",
+    "description": "Crispy pieces of hand-breaded antibiotic-free chicken breast, served with BBQ or honey mustard sauce",
+    "name": "Chick'n Bites 6 pcs"
+  },
+  {
+    "price": "$6.36",
+    "basecalories": "500",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Chickn-ChickNBites10-2_md1547220022.jpeg",
+    "id": 3284377,
+    "maximumquantity": null,
+    "minimumquantity": "1",
+    "description": "Crispy pieces of hand-breaded antibiotic-free chicken breast, served with BBQ or honey mustard sauce",
+    "name": "Chick'n Bites 10 pcs"
+  },
+  {
+    "price": "$9.3",
+    "description": "Cheeseburger topped with Peg Leg Porker seasoned cracklins and ShackSauce",
+    "name": "Crackle Shack",
+    "basecalories": "580",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Regional-CrackleShack-2_md1547220038.jpeg",
+    "minimumquantity": "1",
+    "id": 3284446
+  },
+  {
+    "price": "$5.553",
+    "basecalories": "590",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Regional-GreenChileCheddar-1_md1547220077.jpeg",
+    "id": 3284584,
+    "description": "Cheeseburger topped with shredded white cheddar, marinated green chiles and scallions",
+    "name": "Green Chile Cheddarshack"
+  },
+  {
+    "price": "$4.3",
+    "basecalories": "610",
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Topped with MSG-free, nitrite-free Niman Ranch bacon, served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-SmokeShack-1_md1547220144.jpeg",
+    "id": 3284860,
+    "minimumquantity": "1",
+    "description": "Cheeseburger topped with Applewood Smoked Bacon, chopped cherry peppers and ShackSauce",
+    "name": "SmokeShack"
+  },
+  {
+    "price": "$5.63",
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Topped with MSG-free, nitrite-free Niman Ranch bacon, served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-SmokeShack-1_md1547220159.jpeg",
+    "id": 3284929,
+    "minimumquantity": "1",
+    "description": "Cheeseburger topped with Applewood Smoked Bacon, chopped cherry peppers and ShackSauce. 620/930/1120 cal",
+    "name": "SmokeShack",
+    "favorite": true
+  },
+  {
+    "price": "$4.03",
+    "basecalories": "620",
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Topped with MSG-free, nitrite-free Niman Ranch bacon, served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-SmokeShack-1_md1547220172.jpeg",
+    "endhour": 24,
+    "id": 3284998,
+    "minimumquantity": "1",
+    "description": "Cheeseburger topped with Applewood Smoked Bacon, chopped cherry pepper and ShackSauce",
+    "name": "SmokeShack"
+  },
+  {
+    "price": "$4.45",
+    "basecalories": "590",
+    "goodingredients": "100% all-natural cage-free chicken. No hormones and no antibiotics ever. Served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-ChickNShack-1_md1547220192.jpeg",
+    "id": 3285067,
+    "minimumquantity": "1",
+    "description": "Crispy chicken breast topped with lettuce, pickles and buttermilk herb mayo",
+    "name": "Chick’n Shack"
+  },
+  {
+    "price": "$6.3",
+    "basecalories": "530",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-VeggieShack-1_md1547220210.jpeg",
+    "id": 3285136,
+    "minimumquantity": "1",
+    "description": "Veggie burger made with black beans, brown rice and beets topped with provolone cheese, lettuce, tomato, onions, pickles and vegan mustard mayo",
+    "chainproductid": 160641,
+    "name": "Veggie Shack",
+    "favorite": true
+  },
+  {
+    "price": "$6.63",
+    "basecalories": "390",
+    "menuitemlabels": [],
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burgers-VeganVeggie-2_md1547220239.jpeg",
+    "id": 3285205,
+    "minimumquantity": "1",
+    "description": "A Vegan version of our Veggie Shack. Made with black beans, brown rice and beets topped with lettuce, tomato, onions, pickles, vegan mustard mayo on a gluten-free bun",
+    "chainproductid": 160593,
+    "name": "Vegan Shack (GF)"
+  },
+  {
+    "price": "$8.03",
+    "basecalories": "850",
+    "goodingredients": "100% all-natural Angus beef cheeseburger topped with caramelized onions simmered in beer and bacon",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Regional-DoubleRoadside-2_md1547220314.jpeg",
+    "id": 3285412,
+    "minimumquantity": "1",
+    "description": "A 100% all-natural Angus beef cheeseburger topped with caramelized onions simmered in beer and bacon",
+    "name": "Roadside Double"
+  },
+  {
+    "price": "$2.93",
+    "basecalories": "810",
+    "goodingredients": "Cheeserburger topped with grilled Kruez Market jalapeno cheese sausage link, pickles, and ShackSauce",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Regional-LockhartLink-2_md1547220332.jpeg",
+    "imagefilename": null,
+    "id": 3285481,
+    "minimumquantity": "1",
+    "description": "Cheeseburger topped with griddled Kreuz Market jalapeño cheese sausage link, ShackSauce, pickles",
+    "name": "Lockhart Link Burger"
+  },
+  {
+    "price": "$9.43",
+    "basecalories": "730",
+    "goodingredients": "Cheeserburger topped with grilled Pecan lodge jalapeno cheese sausage link, pickles, and ShackSauce",
+    "menuitemlabels": [],
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Regional-LockhartLink-2_md1547220364.jpeg",
+    "id": 3285550,
+    "minimumquantity": "1",
+    "description": "Cheeseburger topped with griddled Pecan Lodge jalapeño cheese sausage link, pickles, ShackSauce",
+    "name": "Link Burger"
+  },
+  {
+    "price": "$4",
+    "basecalories": "550",
+    "goodingredients": "Served on a non-GMO potato bun.",
+    "menuitemlabels": [],
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-ShroomBurger-3_md1547220387.jpeg",
+    "id": 3285619,
+    "minimumquantity": "1",
+    "description": "Crisp-fried portobello mushroom filled with melted muenster and cheddar cheeses, topped with lettuce, tomato and ShackSauce",
+    "name": "'Shroom Burger"
+  },
+  {
+    "price": "$4.3",
+    "basecalories": "800",
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Freshly ground proprietary Shack blend, served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-ShackStack-1_md1547220403.jpeg",
+    "id": 3285688,
+    "minimumquantity": "1",
+    "description": "Cheeseburger and a ’Shroom Burger topped with lettuce, tomato and ShackSauce",
+    "name": "Shack Stack",
+    "favorite": true
+  },
+  {
+    "price": "$7.7",
+    "basecalories": "400",
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Freshly ground proprietary Shack blend, served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-Hamburger-2_md1547220539.jpeg",
+    "id": 3285757,
+    "minimumquantity": "1",
+    "description": "100% all-natural Angus beef hamburger",
+    "chainproductid": 160555,
+    "name": "Hamburger"
+  },
+  {
+    "price": "$8.3",
+    "basecalories": "390",
+    "goodingredients": "100% all-natural Angus beef. No hormones and no antibiotics ever. Freshly ground proprietary Shack blend, served on a non-GMO potato bun.",
+    "image": "https://ssapp-stage.s3.amazonaws.com/SSApp_Burger-Hamburger-2_md1547220585.jpeg",
+    "id": 3285826,
+    "minimumquantity": "1",
+    "description": "100% all-natural Angus beef hamburger",
+    "name": "Hamburger"
+  }
+]

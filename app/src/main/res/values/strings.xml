@@ -1,0 +1,390 @@
+<resources>
+
+    <string name="app_name">Shake Shack</string>
+
+    <string name="facebook_app_id">1763767896974538</string>
+    <string name="fb_login_protocol_scheme">fb1763767896974538</string>
+
+    <string name="asap_ordering">Next Available : ASAP</string>
+    <string name="non_asap_ordering">Next Available : NON-ASAP</string>
+    <string name="try_it_now">TRY IT NOW</string>
+    <string name="pick_up">Pickup</string>
+    <string name="delivery">Delivery</string>
+    <string name="order_now">ORDER NOW</string>
+    <string name="submit">Submit</string>
+    <string name="try_different_location_button">Try a different location</string>
+    <string name="yes_am_picking_up_location_button">Yes, I\'m picking up from there</string>
+    <string name="no_shack_near_this_location">Oops, it seems there\'s no Shack near this location :(</string>
+    <string name="no_location_near_detail">But good to know that you\'re looking for us there! Maybe one day we open one around!</string>
+    <string name="choose_another_shack">Choose another Shack</string>
+    <string name="far_from_you_location_title">Picking up from %1$s?</string>
+    <string name="far_from_you_location_message">  <![CDATA[It seems that <b><font color=#000000>%1$s</font></b> is far from your current location.]]>  </string>
+    <string name="just_to_confirm">Just to confirm…</string>
+    <string name="delivery_home">Home</string>
+    <string name="delivery_work">Work</string>
+    <string name="learn_more">LEARN MORE</string>
+
+    <!-- Generic -->
+    <string name="cancel">Cancel</string>
+    <string name="view_all">View all</string>
+    <string name="none_selected">None selected</string>
+    <string name="none">None</string>
+    <string name="generic_title_and_description">%1$s: %2$s</string>
+    <string name="additional_cost">+$%1$s</string>
+    <string name="city_state_or_zip_code">City, State, or ZIP Code</string>
+
+    <!-- account string-->
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="password_forgot">Forgot?</string>
+    <string name="asterisks_password_placeholder">********</string>
+    <string name="tells_us_your_email">Tell us your email</string>
+    <string name="next">Next</string>
+    <string name="lets_create_your_account">Let\'s create your account!</string>
+    <string name="create_password">Create password</string>
+    <string name="account">Account</string>
+    <string name="sign_out">Sign out</string>
+    <string name="payment_methods">Payment methods</string>
+    <string name="signed_in">Signed In</string>
+    <string name="expired">Expired</string>
+    <string name="default_payment_method">Default</string>
+    <string name="payment_method_last_four_with_separator">%1$s%2$s</string>
+    <string name="addresses">Addresses</string>
+    <string name="address_second_line_with_instructions">%1$s, %2$s</string>
+    <string name="allergens">Allergens</string>
+
+    <!-- region Order History -->
+    <string name="order_history">Order History</string>
+    <string name="order_details_title">Order details</string>
+    <string name="order_placed">Order placed</string>
+    <string name="delivery_or_pickup_type_title">Delivery or pickup type</string>
+    <string name="order_number_title">Order number</string>
+    <string name="reorder">REORDER</string>
+    <string name="clear_tray_and_reorder">Clear tray and reorder?</string>
+    <string name="reordering_will_clear_tray_warning">Reordering this past order will clear your menu selections and clear the pickup or delivery choices from your current tray.</string>
+    <string name="yes_reorder">Yes, reorder</string>
+    <string name="order_was_canceled">Order was canceled</string>
+    <string name="password_update_success_message">Your password was updated with success!</string>
+    <string name="invalid_current_password">The current password is invalid.</string>
+    <string name="get_support_link">Issues with your order? <u>Get support</u></string>
+    <!-- endregion -->
+
+    <!-- menu titles-->
+    <string name="menu">MENU</string>
+    <string name="breakfast">BREAKFAST</string>
+    <string name="burgers">BURGERS</string>
+    <string name="chicken">CHICKEN</string>
+    <string name="fries">CRINKLE CUT FRIES</string>
+    <string name="flat_top_dogs">FLAT-TOP DOGS</string>
+    <string name="shakes_frozen_custard">SHAKES &amp; FROZEN CUSTARD</string>
+    <string name="drinks">DRINKS</string>
+
+    <!-- menu sub title dropdown-->
+    <string name="order_catering_title">Order Catering</string>
+    <string name="for_your_office_lunch">for your office lunch</string>
+    <string name="stand_for_something">Stand For Something Good</string>
+    <string name="location">Location</string>
+    <string name="careers">Careers</string>
+    <string name="retail">Retail</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="health_and_safety_updates">Health &amp; Safety Updates</string>
+    <string name="download_allergen_details">Download Allergen Details</string>
+    <string name="gift_card">Gift Cards</string>
+    <string name="blog">Blog</string>
+    <string name="investors">Investors</string>
+    <string name="california_transparency">California Transparency in Supply</string>
+    <string name="privacy">Privacy</string>
+    <string name="do_not_sell_info">Do Not Sell My Personal Information</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="lets_get_appy">Let\'s get app-y!</string>
+    <string name="order_ahead">Order ahead for touch-free pick-up!</string>
+    <string name="copyright_footer">©2004–2020 Shake Shack. All Rights Reserved.\n\nSome information on this site may vary slightly by location and in stadium, event venues and international Shacks.</string>
+
+    <!-- Basket/cart string-->
+    <string name="your_favorite_list_title">YOUR FAVORITES</string>
+    <string name="empty_favourite_nothing_here">Nothing here…</string>
+    <string name="empty_favorite_you_havent_added">You haven\'t added anything to your favorites\n
+    so far. Let\'s start thar right now</string>
+    <string name="view_menu_button">View menu</string>
+    <string name="add">Add</string>
+    <string name="make_it_even_better">Make it even better</string>
+    <string name="thats_it_button">That\'s it</string>
+    <string name="lets_wrap_up">Okay, let\'s\n wrap up</string>
+    <string name="delivery_detail_title">Delivery Detail</string>
+    <string name="street_number_and_name">Street number and name</string>
+    <string name="delivery_instruction">Delivery instruction</string>
+    <string name="contact_info_title">Contact info</string>
+    <string name="email_address_for_delivery">Email address</string>
+    <string name="payment_title">Payment</string>
+    <string name="tip_title">Tip</string>
+    <string name="tip_description">100% of this reward goes to the courier</string>
+    <string name="review_order">Review your order</string>
+    <string name="finish_your_order">Finish up\n your order</string>
+    <string name="payment_method">Payment method</string>
+    <string name="pay_button">Pay</string>
+    <string name="image_description">Image Description</string>
+    <string name="lets_try_pick_up">Let’s try pickup then</string>
+
+    <!--Profile-->
+    <string name="profile">Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="first_name_last_name_phone">%1$s %2$s, %3$s</string>
+    <string name="birthday">Birthday</string>
+    <string name="email">Email</string>
+    <string name="messaging">Messaging</string>
+    <string name="receive_sms_from_ss">Receive SMS from Shake Shack</string>
+    <string name="receive_marketing_emails">Receive marketing e-mails</string>
+    <string name="more_details">More Details</string>
+    <string name="more_details_description">Let us know you more, and we will prepare some special offer for you</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="non_binary">Non-Binary</string>
+    <string name="kids">Kids</string>
+    <string name="yup">Yup</string>
+    <string name="nope">Nope</string>
+    <string name="pets">Pets</string>
+    <string name="dog">Dog</string>
+    <string name="cat">Cat</string>
+    <string name="fish">Fish</string>
+    <string name="rock">Rock</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="change">Change</string>
+    <string name="done">Done</string>
+    <string name="save">Save</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-Binary</item>
+    </string-array>
+    <string-array name="kids">
+        <item>Yup</item>
+        <item>Nope</item>
+    </string-array>
+    <string-array name="pets">
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Fish</item>
+        <item>Rock</item>
+    </string-array>
+
+    <!-- region Login -->
+    <string name="sign_in">Sign in</string>
+    <string name="sign_in_with">Sign in with</string>
+    <string name="show_password"><u>Show</u></string>
+    <string name="hide_password"><u>Hide</u></string>
+    <string name="don_t_have_an_account_create_one">Don\'t have an account? Create one now!</string>
+    <string name="did_you_forget_your_password">Did you forget your password?</string>
+    <string name="auth_token">"Auth token: "</string>
+    <string name="invalid_email">Not a valid email</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password can not be empty</string>
+    <string name="login_credentials_do_not_match">The password and email address do not match.</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="shake_shack_logo_description">Shake Shack Logo</string>
+    <string name="side_menu_button_description">Side Menu Button</string>
+    <!-- endregion -->
+
+    <!-- Forgot password -->
+    <string name="forgotten_password">Forgotten password?</string>
+    <string name="forgotten_password_message">Please enter your email address and we will send you an email with a temporary password.</string>
+    <string name="send">Send</string>
+    <string name="check_your_email_title">Check your email</string>
+    <string name="email_sent_message">We\'ve sent you an email with a temporary password.</string>
+    <string name="close">Close</string>
+    <string name="send_it_again">Send it again</string>
+
+    <!-- Menu tabs -->
+    <string name="menu_tab_favorites">Favorites</string>
+    <string name="menu_tab_burgers">Burgers</string>
+    <string name="menu_tab_chickens">Chickens</string>
+    <string name="menu_tab_fries">Fries</string>
+    <string name="menu_tab_hotdogs">Hot Dogs</string>
+    <string name="menu_tab_custards">Custards</string>
+    <string name="menu_tab_drinks">Drinks</string>
+
+    <!-- Speech bubble -->
+    <string name="would_you_mind_telling_us">Would you mind telling us</string>
+    <string name="where_you_are">where you are?</string>
+    <string name="hey_i_see_youre_in">Hey! I see you\'re in</string>
+    <string name="location_name_right_question">%1$s, right?</string>
+    <string name="lunch_suggestion_question">Thinking of a burger\nfor lunch, %1$s?</string>
+    <string name="your_usual">YOUR USUAL</string>
+
+    <!-- One-Tap tray -->
+    <string name="customize">Customize</string>
+
+    <!--PDP-->
+    <string name="nutrition_info">Nutrition Information</string>
+    <string name="ingredients_and_allergens">Ingredients and allergens</string>
+    <string name="view_details">View details</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="product_tag">Product Tag</string>
+
+    <!-- Tray Detail -->
+    <string name="tray_detail_review_your_meal">Review your meal</string>
+    <string name="close_button_description">Close button</string>
+    <string name="tray_detail_missing_anything">Missing anything?</string>
+    <string name="tray_detail_subtotal_taxes">Subtotal + taxes</string>
+    <string name="tray_detail_sweet_you_re_almost_there">Sweet, you\'re almost there</string>
+    <string name="tray_detail_checkout">Checkout</string>
+    <string name="checkout_okay_let_s_wrap_up">Okay, let\'s \nwrap up</string>
+    <string name="checkout_pickup_from">Pickup from Dumbo</string>
+    <string name="checkout_pickup_time">Pickup Time: 12:30 – 12:45pm</string>
+    <string name="checkout_contact_info">Contact Info</string>
+    <string name="checkout_payment">Payment</string>
+    <string name="checkout_card_number">Card number</string>
+    <string name="checkout_ending_in">Ending in 1234</string>
+    <string name="checkout_reward_description">100% of this reward goes to the courier</string>
+    <string name="checkout_tip">Tip</string>
+    <string name="checkout_other">Other</string>
+    <string name="checkout_review_your_order">Review your order</string>
+    <string name="checkout_have_a_coupon_code">Have a coupon code?</string>
+    <string name="enter_custom_amount">Enter custom amount</string>
+    <string name="default_tip_value">$0.00</string>
+    <string name="checkout_subtotal">Subtotal</string>
+    <string name="checkout_taxes">Taxes</string>
+    <string name="checkout_discounts">Discounts</string>
+    <string name="checkout_total">Total</string>
+    <string name="checkout_pay">Pay $21.30</string>
+    <string name="checkout_pickup_time_result">Pickup Time: %1$s</string>
+    <string name="hand_off_mode_description">We\'ll provide pickup instructions.</string>
+    <string name="delivery_time">Delivery time</string>
+    <string name="update">Update</string>
+    <string name="asap">ASAP</string>
+    <string name="pick_up_result">Pickup Time: $s</string>
+    <string name="invalid_coupon">Your coupon code is invalid</string>
+
+    <!--map-->
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyC5NjP4ME1s0G7scF18hWssYXA3NcNMS_g</string>
+    <string name="search_this_area">Search this area</string>
+
+    <!--Order confirmation-->
+    <string name="processing_order">Processing order</string>
+
+    <!--New Card-->
+    <string name="name_on_card">Name on card</string>
+    <string name="zip_code">ZIP code</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="cvv">CVV</string>
+    <string name="exp_date">Exp date</string>
+    <string name="new_card">New card</string>
+    <string name="card_name">Card name</string>
+
+    <!-- region Location permission -->
+    <string name="use_location_question">Use location?</string>
+    <string name="location_permission_rationale">Shake Shack would like to use your current location to show you Shacks nearby.</string>
+    <string name="location_permission_rationale_with_app_settings">Shake Shack would like to use your current location to show you Shacks nearby. Since you previously denied the permission, now we\'ll take you to the App Settings screen and you\'ll be able to grant it from there.</string>
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+    <string name="allow_in_app_settings">Allow in App Settings</string>
+    <string name="could_not_get_your_location">Could not get your location. Check device Location Settings or signal strength.</string>
+    <string name="my_location">My Location</string>
+    <!-- endregion -->
+
+    <!--Pickup type-->
+    <string name="pickup_type_sub_title">Your selected location offers these pick-up methods.Select one to start your order.</string>
+    <string name="pickup_type_title">Select a pick-up type to start your order</string>
+    <string name="change_location">Change Location</string>
+    <string name="curbside">Curbside</string>
+    <string name="curbisde_detail">Your order will be delivered to your parked vehicle at your local Shake Shack.</string>
+    <string name="walk_up_window">Walk-Up Window</string>
+    <string name="walk_up_window_detail">Pick your order up from an outdoor window at your local Shake Shack.</string>
+    <string name="indoor_pick_up">Indoor Pick-Up</string>
+    <string name="indoor_pick_up_detail">Please pick up your order at the counter inside your local Shake Shack.</string>
+    <string name="shack_track">SHACK <b><i>TRACK </i></b></string>
+    <string name="pick_up_methods_available_title">Pick-up methods available</string>
+
+
+    <!--Car info -->
+    <string name="car_color">Car Color</string>
+    <string name="car_type">Car Type</string>
+    <string name="start_order">START ORDER</string>
+    <string name="car_ok">OK</string>
+    <string name="car_cancel">CANCEL</string>
+    <string name="car_color_white">White</string>
+    <string name="car_color_black">Black</string>
+    <string name="car_color_grey">Grey</string>
+    <string name="car_color_blue">Blue</string>
+    <string name="car_color_red">Red</string>
+    <string name="car_color_brown">Brown</string>
+    <string name="car_color_green">Green</string>
+    <string name="car_color_yellow">Yellow</string>
+    <string name="car_color_gold_tan_silver">Gold/Tan/Silver</string>
+    <string name="car_type_sedan">Sedan</string>
+    <string name="car_type_suv_crossover">SUV/Crossover</string>
+    <string name="car_type_van_minivan">Van/Minivan</string>
+    <string name="car_type_truck_pickup">Truck/Pickup</string>
+    <string name="car_type_hatchback">Hatchback</string>
+    <string name="car_type_convertible">Convertible</string>
+    <string name="car_type_sportscar">Sportscar</string>
+
+    <!-- Create account -->
+    <string name="contact_information">Contact information</string>
+    <string name="contact_information_description"><u>Sign in</u>, or click here if you\'ve <u>forgotten your password</u>.</string>
+    <string name="create_account">Create account</string>
+
+    <!-- Password creation/change -->
+    <string name="password_rule_length">At least 8 characters</string>
+    <string name="password_rule_lowercase">One lower case letter</string>
+    <string name="password_rule_special_char">One special character</string>
+    <string name="password_rule_number">One number</string>
+    <string name="password_rule_match">Passwords must match</string>
+    <string name="password_rule_uppercase">One upper case letter</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="password_title">Password</string>
+    <string name="enter_address">Enter an address</string>
+    <string name="my_current_location">My Current Location</string>
+
+    <!-- Order tracking -->
+    <string name="estimated_time_for_pickup">Estimated time for pickup</string>
+    <string name="order_received">Order received</string>
+    <string name="preparation">Preparation</string>
+    <string name="ready_for_pickup">Ready for pickup</string>
+    <string name="picked_up">Picked up</string>
+    <string name="order_status_recommendation">We recommend consuming your order ASAP for best tastes.</string>
+    <string name="order_thirty_min_warning">If your order is still on the shelf 30 minutes after your designated pick-up time, we\'ll compost it for food quality reasons.</string>
+    <string name="pick_up_curbside_detail">Park in a space marked with the green Curbside signs. Then click the I\'m Here button to let us know you\'ve arrived!</string>
+    <string name="hold_on_we_re_preparing_your_meal">Hold on! We\'re Preparing your meal!</string>
+    <string name="preparing_order">Preparing Order</string>
+    <string name="see_instructions">See instructions</string>
+    <string name="order_prepared">Order prepared</string>
+    <string name="come_by_the_store_to_pickup_your_order">Come by the store to pickup your order.</string>
+    <string name="your_order_is_complete_enjoy">Your order is complete. Enjoy!</string>
+    <string name="order_completed">Order Completed</string>
+    <string name="see_you_soon">See you soon</string>
+    <string name="we_putting_together_your_order">We\'re putting together your order</string>
+    <string name="order_ready_for_pick_up">Order is Ready for pickup</string>
+    <string name="order_is_waiting_for_pick_up">The order is ready and waiting for pickup</string>
+    <string name="order_has_been_picked_up">Order has been picked up</string>
+    <string name="your_driver_is_grabbing_your_order">Your driver is grabbing your order</string>
+    <string name="driver_is_on_his_way">Driver is on the way</string>
+    <string name="order_en_route">Your order is en route</string>
+    <string name="we_ve_received_your_order">We\'ve received your order</string>
+
+    <!-- Get Support-->
+    <string name="get_support_info_title">Try these steps to resolve your issue as quickly as possible.</string>
+    <string name="call_your_driver_info">Call your driver for an update on your food delivery status.</string>
+    <string name="call_your_driver_text">Call your driver</string>
+    <string name="call_support_text">Call support</string>
+    <string name="call_support_info">Speak with a representative from our delivery service provide for additional support options.</string>
+    <string name="more_support_actions">More support actions</string>
+    <string name="issue_type_info_title">Choose an issue type from the list below</string>
+    <string name="something_wrong_with_order_title">We\'re sorry something was wrong with your order. </string>
+    <string name="provide_more_details_info">Please provide us more details so we can fix it.</string>
+    <string name="additional_issue_details">Additional Issue Details</string>
+    <string name="refund_success_info_text">Don\'t worry - we\'ve submitted your order for refund and hope you will give us another chance to get it right next time</string>
+    <string name="start_new_order">START A NEW ORDER</string>
+    <string name="need_further_assistance">Need further assistance?</string>
+    <string name="visit_contact_us_info">Visit our Contact Us page and continue the conversation by phone or email.\n\n<u>Contact Us</u></string>
+    <string name="not_refund_thanks_title">Thanks for the chance to make things right</string>
+
+    <!-- URLs -->
+    <string name="url_contact_us">https://www.shakeshack.com/contact</string>
+    <string name="url_health_and_safety">https://www.shakeshack.com/contact</string>
+    <string name="url_download_allergens">http://shakeshackstg.prod.acquia-sites.com/allergens</string>
+</resources>

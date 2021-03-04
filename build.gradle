@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlinVersion = '1.4.31'
+    ext.navVersion = '2.3.3'
+    ext.hiltVersion = '2.28-alpha'
+    ext.googleServicesVersion = '4.3.4'
+    ext.firebaseCrashlyticsGradleVersion = '2.3.0'
+    ext.androidStudioVersion = '4.1.2'
+    ext.sonarCloudVersion = '3.1.1'
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$androidStudioVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+
+        // Firebase Crashlytics:
+        classpath "com.google.gms:google-services:$googleServicesVersion"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$firebaseCrashlyticsGradleVersion"
+
+        // SonarCloud
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$sonarCloudVersion"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

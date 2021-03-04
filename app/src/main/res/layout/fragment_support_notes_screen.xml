@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar"
+        tools:layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/something_wrong_with_order_title"
+        style="@style/ShakeShackTextView.HeadingH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_container"
+        android:layout_marginHorizontal="@dimen/size_30dp"
+        android:layout_marginTop="@dimen/size_40dp"
+        android:text="@string/something_wrong_with_order_title" />
+
+    <TextView
+        android:id="@+id/provide_more_details_info"
+        style="@style/ShakeShackTextView.BodyNormal.Grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/something_wrong_with_order_title"
+        android:layout_margin="@dimen/size_30dp"
+        android:text="@string/provide_more_details_info" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addition_issue_details_input_layout"
+        style="@style/ShakeShackTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/provide_more_details_info"
+        android:layout_marginHorizontal="@dimen/size_30dp"
+        android:layout_marginTop="@dimen/size_50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addition_issue_details_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/additional_cost"
+            android:hint="@string/additional_issue_details"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit_issue_button"
+        android:layout_below="@id/addition_issue_details_input_layout"
+        android:layout_alignParentStart="true"
+        android:minHeight="60dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_issue_button"
+        style="@style/ShakeShackButton.Text.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/size_30dp"
+        android:enabled="false"
+        android:text="@string/submit"/>
+
+</RelativeLayout>

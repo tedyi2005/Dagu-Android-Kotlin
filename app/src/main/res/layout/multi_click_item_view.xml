@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:id="@+id/multi_select_name"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="@dimen/size_15dp"
+        tools:text="Male"/>
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/multi_select_name"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/size_20dp"
+        android:contentDescription="@string/image_description"
+        android:scaleType="center"
+        android:src="@drawable/ic_circle_plus" />
+
+</RelativeLayout>

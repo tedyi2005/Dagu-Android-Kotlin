@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_gray_circle" />
+    <item
+        android:bottom="@dimen/size_7dp"
+        android:drawable="@drawable/ic_gray_plus"
+        android:left="@dimen/size_7dp"
+        android:right="@dimen/size_7dp"
+        android:top="@dimen/size_7dp" />
+</layer-list>

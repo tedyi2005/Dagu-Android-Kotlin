@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size_20dp">
+
+    <TextView
+        android:id="@+id/favorites_title"
+        style="@style/ShakeShackTextView.HeadingH2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_28dp"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginBottom="@dimen/size_30dp"
+        android:text="@string/your_favorite_list_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/favorites_view_all"
+        style="@style/ShakeShackTextView.BodyNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginBottom="@dimen/size_7dp"
+        android:text="@string/view_all"
+        android:textColor="@color/grey_500"
+        app:layout_constraintBottom_toBottomOf="@id/favorites_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favorites_horizontal_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_30dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/favorites_title" />
+
+    <View
+        android:id="@+id/total_separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginVertical="@dimen/size_20dp"
+        android:background="@color/grey_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favorites_horizontal_recycler" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

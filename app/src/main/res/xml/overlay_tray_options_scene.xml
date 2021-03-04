@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!--region Visibility ignores -->
+    <!-- visibilityMode="ignore" is needed to enable changing the visibility of the referenced
+    widgets programmatically. Otherwise the MotionLayout would take control of this attribute and
+    it could only be changed from inside the scene. -->
+    <ConstraintSet android:id="@+id/constraint_set_base_tray_options_visibility">
+
+        <Constraint android:id="@id/tray_size_picker">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@id/tray_unclassified_picker">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tray_unclassified_singleton_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:translationZ="@dimen/size_5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tray_unclassified_picker">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@+id/tray_unclassified_singleton_button">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/tray_addition_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:translationZ="@dimen/size_5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tray_unclassified_singleton_button">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@id/tray_customize_button">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@id/tray_amount_spinner">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+    </ConstraintSet>
+    <!--endregion-->
+
+    <!-- Make the Tray Unclassified Singleton button fall and fade out + Redirect its references to
+    the closest visible tray option widget -->
+    <ConstraintSet
+        android:id="@+id/constraint_set_tray_unclassified_singleton_button_clicked"
+        motion:deriveConstraintsFrom="@+id/constraint_set_base_tray_options_visibility">
+        <Constraint
+            android:id="@+id/tray_unclassified_singleton_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:rotation="20"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:translationZ="@dimen/size_10dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/tray_addition_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:translationZ="@dimen/size_5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tray_unclassified_picker" />
+    </ConstraintSet>
+
+    <!-- Make the Tray Addition button fall and fade out + Redirect its references to the closest
+    the closest visible tray option widget -->
+    <ConstraintSet
+        android:id="@+id/constraint_set_tray_addition_button_clicked"
+        motion:deriveConstraintsFrom="@+id/constraint_set_base_tray_options_visibility">
+        <Constraint
+            android:id="@+id/tray_addition_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:rotation="20"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:translationZ="@dimen/size_10dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/tray_customize_button"
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:translationZ="@dimen/size_5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tray_unclassified_picker" />
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_tray_addition_button_clicked"
+        motion:constraintSetEnd="@id/constraint_set_tray_addition_button_clicked"
+        motion:constraintSetStart="@id/constraint_set_base_tray_options_visibility"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="1.3"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/tray_addition_button" />
+            <KeyAttribute
+                android:scaleY="1.3"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/tray_addition_button" />
+            <KeyAttribute
+                android:scaleX="1.0"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/tray_addition_button" />
+            <KeyAttribute
+                android:scaleY="1.0"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/tray_addition_button" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_tray_unclassified_singleton_button_clicked"
+        motion:constraintSetEnd="@id/constraint_set_tray_unclassified_singleton_button_clicked"
+        motion:constraintSetStart="@id/constraint_set_base_tray_options_visibility"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="1.3"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/tray_unclassified_singleton_button" />
+            <KeyAttribute
+                android:scaleY="1.3"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/tray_unclassified_singleton_button" />
+            <KeyAttribute
+                android:scaleX="1.0"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/tray_unclassified_singleton_button" />
+            <KeyAttribute
+                android:scaleY="1.0"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/tray_unclassified_singleton_button" />
+        </KeyFrameSet>
+    </Transition>
+
+</MotionScene>

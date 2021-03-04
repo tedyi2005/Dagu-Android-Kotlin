@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/size_28dp"
+    android:layout_marginVertical="@dimen/size_8dp"
+    android:background="@drawable/btn_round_corner_shape"
+    android:orientation="vertical"
+    android:padding="@dimen/size_20dp">
+
+    <TextView
+        android:id="@+id/address_name_text_view"
+        style="@style/ShakeShackTextView.BodyNormal.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/size_3dp"
+        app:layout_constraintEnd_toStartOf="@id/address_options_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Home" />
+
+    <ImageView
+        android:id="@+id/address_options_button"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_circle_gray_200"
+        android:padding="@dimen/size_2dp"
+        android:src="@drawable/ic_ellipsis"
+        app:layout_constraintBottom_toBottomOf="@id/address_name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/address_first_line_text_view"
+        style="@style/ShakeShackTextView.BodySmall.Grey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/size_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_name_text_view"
+        tools:text="First line" />
+
+    <TextView
+        android:id="@+id/address_second_line_text_view"
+        style="@style/ShakeShackTextView.BodySmall.Grey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/size_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_first_line_text_view"
+        tools:text="Second line, Instructions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

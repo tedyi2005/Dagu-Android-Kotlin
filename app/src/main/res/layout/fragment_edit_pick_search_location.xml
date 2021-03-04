@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_pickup_time_layout"
+    android:layout_marginStart="@dimen/size_20dp"
+    android:layout_marginTop="@dimen/size_20dp"
+    android:layout_marginEnd="@dimen/size_20dp"
+    android:layout_marginBottom="@dimen/size_30dp"
+    android:clipToPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/update_button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/button_end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/edit_pickup_time_nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_pickup_time_time_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pickup_location_search_edit_text_layout"
+                style="@style/ShakeShackTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grey_500"
+                app:hintTextColor="@color/grey_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pickup_location_search_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/city_state_or_zip_code"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <ImageView
+                android:id="@+id/search_edit_text_image_view"
+                android:layout_width="@dimen/size_24dp"
+                android:layout_height="@dimen/size_24dp"
+                android:layout_marginEnd="@dimen/size_8dp"
+                android:layout_marginBottom="@dimen/size_13dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:padding="@dimen/size_2dp"
+                android:src="@drawable/ic_pinpoint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/search_edit_text_view_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="search_edit_text_image_view,pickup_location_search_edit_text_layout" />
+
+            <TextView
+                android:id="@+id/search_selected_location_text_view"
+                style="@style/ShakeShackTextView.BodyNormal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_30dp"
+                android:layout_marginStart="@dimen/size_20dp"
+                app:layout_constraintBottom_toTopOf="@id/recyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/search_selected_clear_image_view"
+                android:layout_width="@dimen/size_24dp"
+                android:layout_height="@dimen/size_24dp"
+                android:layout_marginEnd="@dimen/size_8dp"
+                android:padding="@dimen/size_2dp"
+                android:src="@drawable/ic_clear_field"
+                app:layout_constraintBottom_toBottomOf="@id/search_selected_location_text_view"
+                app:layout_constraintStart_toEndOf="@id/search_selected_location_text_view"
+                app:layout_constraintTop_toTopOf="@id/search_selected_location_text_view" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/selected_location_view_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="search_selected_clear_image_view,search_selected_location_text_view" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/location_info_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="search_selected_location_text_view,pickup_location_search_edit_text_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location_info_barrier" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

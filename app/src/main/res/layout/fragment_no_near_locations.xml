@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/size_28dp">
+
+    <ImageButton
+        android:id="@+id/close_bottom_sheet_btn"
+        android:layout_width="@dimen/size_34dp"
+        android:layout_height="@dimen/size_34dp"
+        android:layout_marginTop="@dimen/size_28dp"
+        android:layout_marginEnd="@dimen/size_28dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/close_button_description"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/no_near_location_title"
+        style="@style/ShakeShackTextView.HeadingH3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_28dp"
+        android:layout_marginEnd="@dimen/size_28dp"
+        android:text="@string/no_shack_near_this_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close_bottom_sheet_btn" />
+
+    <TextView
+        android:id="@+id/no_near_location_detail_text_view"
+        style="@style/ShakeShackTextView.BodyNormal.Grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_28dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_28dp"
+        android:maxLines="2"
+        android:text="@string/no_location_near_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_near_location_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/try_different_location_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_28dp"
+        android:layout_marginTop="@dimen/size_40dp"
+        android:layout_marginEnd="@dimen/size_28dp"
+        android:layout_marginBottom="@dimen/size_28dp"
+        android:background="@drawable/btn_green_rounded_corner"
+        android:text="@string/try_different_location_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_near_location_detail_text_view" />
+
+    <TextView
+        android:id="@+id/lets_try_pick_up"
+        style="@style/ShakeShackTextView.BodyExtraSmall.Bold.Clickable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_28dp"
+        android:padding="@dimen/size_10dp"
+        android:text="@string/lets_try_pick_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/try_different_location_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

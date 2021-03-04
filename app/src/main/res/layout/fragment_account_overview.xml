@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar"
+        tools:layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/account_overview_title"
+                style="@style/ShakeShackTextView.HeadingH2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_28dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/order_history_overview_title"
+                style="@style/ShakeShackTextView.BodyNormal.Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_28dp"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:text="@string/order_history"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/account_overview_title" />
+
+            <TextView
+                android:id="@+id/order_history_overview_view_all_link"
+                style="@style/ShakeShackTextView.BodyNormal.Grey.Link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_32dp"
+                android:text="@string/view_all"
+                app:layout_constraintBottom_toBottomOf="@id/order_history_overview_title"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <include
+                android:id="@+id/order_history_overview_container"
+                layout="@layout/item_order_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/order_history_overview_title" />
+
+            <include
+                android:id="@+id/profile_container"
+                layout="@layout/item_user_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/order_history_overview_container" />
+
+            <include
+                android:id="@+id/payment_methods_container"
+                layout="@layout/item_user_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_container" />
+
+            <include
+                android:id="@+id/addresses_container"
+                layout="@layout/item_user_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_methods_container" />
+
+            <include
+                android:id="@+id/allergens_container"
+                layout="@layout/item_user_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addresses_container" />
+
+            <TextView
+                android:id="@+id/sign_out_link"
+                style="@style/ShakeShackTextView.BodyNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20dp"
+                android:gravity="center"
+                android:padding="@dimen/size_20dp"
+                android:text="@string/sign_out"
+                android:textColor="@color/grey_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/allergens_container" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

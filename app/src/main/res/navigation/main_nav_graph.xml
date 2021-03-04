@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <action
+        android:id="@+id/debug_fragment_action"
+        app:destination="@id/debug_fragment" />
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.dagu.android.presentation.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_fragment_to_account_overview_fragment"
+            app:destination="@id/account_overview_fragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/debug_fragment"
+        android:name="com.dagu.android.presentation.debug.DebugFragment"
+        android:label="DebugFragment"
+        tools:layout="@layout/fragment_debug">
+
+        <action
+            android:id="@+id/locations_fragment_action"
+            app:destination="@id/locations_fragment" />
+
+        <action
+            android:id="@+id/order_get_support_fragment_action"
+            app:destination="@id/order_get_support_fragment" />
+
+    </dialog>
+
+    <fragment
+        android:id="@+id/locations_fragment"
+        android:name="com.dagu.android.presentation.location.LocationsFragment"
+        android:label="LocationFragment" />
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.ProfileFragment"
+        android:label="profileFragment" />
+
+    <dialog
+        android:id="@+id/fragment_change_password_dialog"
+        android:name="com.dagu.android.presentation.account.fragment.ChangePasswordDialogFragment"
+        android:label="ChangePasswordDialogFragment"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/account_overview_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.AccountOverviewFragment"
+        android:label="AccountOverviewFragment">
+
+        <action
+            android:id="@+id/order_history_action"
+            app:destination="@id/order_history_fragment" />
+
+        <action
+            android:id="@+id/action_order_details_fragment"
+            app:destination="@id/order_details_fragment" />
+
+        <action
+            android:id="@+id/profile_action"
+            app:destination="@id/profile_fragment" />
+
+        <action
+            android:id="@+id/payment_methods_action"
+            app:destination="@id/payment_methods_fragment" />
+
+        <action
+            android:id="@+id/user_addresses_action"
+            app:destination="@id/user_addresses_fragment" />
+
+        <action
+            android:id="@+id/user_allergens_action"
+            app:destination="@id/user_allergens_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/order_history_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.OrderHistoryFragment"
+        android:label="OrderHistoryFragment">
+        <action
+            android:id="@+id/action_order_details_fragment"
+            app:destination="@id/order_details_fragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/reorder_fragment"
+        android:name="com.dagu.android.presentation.account.dialog.ReorderDialogFragment"
+        android:label="ReorderFragment"
+        tools:layout="@layout/fragment_reorder_dialog" />
+
+    <fragment
+        android:id="@+id/order_details_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.OrderDetailsFragment"
+        android:label="OrderDetailsFragment">
+        <argument
+            android:name="order"
+            app:argType="com.dagu.android.data.authentication.model.Orders"
+            app:nullable="false" />
+        <action
+            android:id="@+id/reorder_fragment_action"
+            app:destination="@id/reorder_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/payment_methods_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.payment.PaymentMethodsFragment"
+        android:label="PaymentMethodsFragment">
+
+        <action
+            android:id="@+id/add_payment_method_action"
+            app:destination="@id/new_card_payment_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/new_card_payment_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.payment.NewCardPaymentFragment"
+        android:label="NewCardPaymentFragment" />
+
+    <fragment
+        android:id="@+id/order_get_support_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.OrderGetSupportFragment"
+        android:label="OrderGetSupportFragment">
+
+        <action
+            android:id="@+id/more_support_options_fragment_action"
+            app:destination="@+id/more_support_options_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/more_support_options_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.MoreSupportOptionsFragment"
+        android:label="MoreSupportOptionsFragment">
+
+        <action
+            android:id="@+id/support_notes_screen_fragment_action"
+            app:destination="@+id/support_notes_screen_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/support_notes_screen_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.SupportNotesScreenFragment"
+        android:label="SupportNotesScreenFragment">
+
+        <action
+            android:id="@+id/refund_process_success_screen_dialog_action"
+            app:destination="@+id/refund_process_success_screen_dialog" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/refund_process_success_screen_dialog"
+        android:name="com.dagu.android.presentation.account.fragment.RefundProcessSuccessScreenDialogFragment"
+        android:label="RefundProcessSuccessScreenDialogFragment"
+        tools:layout="@layout/fragment_refund_process_success_screen">
+
+        <argument
+            android:name="isRefunded"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/home_fragment_action"
+            app:destination="@id/home_fragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/user_addresses_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.UserAddressesFragment"
+        android:label="UserAddressesFragment" />
+
+    <fragment
+        android:id="@+id/user_allergens_fragment"
+        android:name="com.dagu.android.presentation.account.fragment.UserAllergensFragment"
+        android:label="UserAllergensFragment" />
+
+    <action
+        android:id="@+id/checkout_main_action"
+        app:destination="@+id/checkout_nav_graph" />
+
+    <include app:graph="@navigation/checkout_nav_graph" />
+
+</navigation>

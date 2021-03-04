@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Hero Mobile -->
+    <style name="TextAppearance.ShakeShack.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/ss_hero_mobile_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_bold</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+
+    <!-- Heading H1 -->
+    <style name="TextAppearance.ShakeShack.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">@dimen/ss_heading_h1_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_bold</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+
+    <!-- Heading H2 -->
+    <style name="TextAppearance.ShakeShack.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">@dimen/ss_heading_h2_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_bold</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <!-- Heading H3 -->
+    <style name="TextAppearance.ShakeShack.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">@dimen/ss_heading_h3_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_bold</item>
+        <item name="lineHeight">27sp</item>
+        <item name="fontWeight">700</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ShakeShack.Headline5" parent="TextAppearance.MaterialComponents.Headline5" />
+
+    <style name="TextAppearance.ShakeShack.Headline6" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="TextAppearance.ShakeShack.Subtitle1" parent="TextAppearance.ShakeShack.Body1" />
+
+    <style name="TextAppearance.ShakeShack.Subtitle2" parent="TextAppearance.ShakeShack.Body2" />
+
+    <!-- Body Normal -->
+    <style name="TextAppearance.ShakeShack.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/ss_body_normal_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_medium</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!-- Body Small -->
+    <style name="TextAppearance.ShakeShack.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">@dimen/ss_body_small_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_medium</item>
+        <item name="lineHeight">20sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.ShakeShack.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/ss_body_normal_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_medium</item>
+        <item name="lineHeight">24sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Body ExtraSmall -->
+    <style name="TextAppearance.ShakeShack.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/ss_body_extra_small_text_size</item>
+        <item name="fontFamily">@font/futura_lt_pro_medium</item>
+        <item name="lineHeight">16sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.ShakeShack.Overline" parent="TextAppearance.MaterialComponents.Overline">
+
+    </style>
+</resources>

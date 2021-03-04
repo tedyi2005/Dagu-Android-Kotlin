@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tray_extra_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginEnd="@dimen/size_20dp"
+    android:layout_marginBottom="@dimen/size_4dp"
+    android:background="@drawable/generic_bubble_background"
+    android:elevation="@dimen/size_5dp"
+    android:padding="@dimen/size_15dp">
+
+    <TextView
+        android:id="@+id/tray_extra_name"
+        style="@style/ShakeShackTextView.BodyExtraSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="Bacon"
+        android:textColor="@color/black"
+        android:textFontWeight="900"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tray_extra_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tray_extra_price"
+        style="@style/ShakeShackTextView.BodyExtraSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:paddingStart="@dimen/size_7dp"
+        android:text="$1.79"
+        android:textColor="@color/grey_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

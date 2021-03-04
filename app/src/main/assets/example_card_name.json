@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "itemName": "Personal",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 2,
+    "itemName": "Work",
+    "itemValue": null,
+    "isValueVisible": false
+  },
+  {
+    "id": 3,
+    "itemName": "Custom",
+    "itemValue": null,
+    "isValueVisible": false
+  }
+]
